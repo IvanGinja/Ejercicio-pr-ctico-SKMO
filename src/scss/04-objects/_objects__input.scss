@@ -1,0 +1,84 @@
+/*-------------------------------------------------------------
+	#ALERTS
+-----------------------------------------------------------------*/
+
+@if $include__input==true {
+	// Block
+	$input__position				:	relative 						!default;
+	$input__display					:	block 							!default;
+	$input__width					:	100% 							!default;
+	$input__height					:	rem(38) 		    			!default;
+	$input__font-size				:	rem($ns-font-size) 		     	!default;
+	$input__line-height				:	1.2								!default;
+	$input__color					:	color(ns-tertiary) 				!default;
+	$input__padding-y				:	rem(6)							!default;
+	$input__padding-x				:	rem(12)							!default;
+	$input__background				:	color(white)				  !default;
+	$input__border					:	2px 							!default;
+	$input__border-style			:	solid 							!default;
+	$input__border-color			:	color(default) 					!default;
+	$input__border-radius			:	4px 							!default;
+	$input__resize					:	vertical 						!default;
+	$input__hover-transition		:	border-color .15s ease-in-out,
+										box-shadow .15s ease-in-out 	!default;
+	$input__modifiers-colors		:	default primary success danger warning info darken	!default;
+
+
+	.o-input,
+	%input {
+		position				:	$input__position;
+		display					:	$input__display;
+		width					:	$input__width;
+		min-height				:	$input__height;
+		padding					:	$input__padding-y $input__padding-x;
+		font-size				:	$input__font-size;
+		line-height				:	$input__line-height;
+		color					:	$input__color;
+		background-color		:	$input__background;
+		border					:	$input__border $input__border-style $input__border-color;
+		resize					:	$input__resize;
+		@include border-radius($input__border-radius);
+		@include transition($input__hover-transition);
+
+		/**
+		 * Actions
+		 */
+
+		&:active:not(:disabled):not(:read-only),
+		&:focus:not(:disabled):not(:read-only) {
+			outline: 0;
+			border-color: color(primary);
+			@include box-shadow(0 0 0 3px color(primary, 0.5));
+		}
+		
+		/**
+		* Disabled
+		*/
+		
+		&:disabled,
+		&:read-only {
+			outline: 0;
+			background-color: color(disabled);
+			border-color: color(default-light);
+		}
+
+		/**
+		 * Modifiers colors
+		 */
+
+		@if $input__modifiers-colors != none {
+			@each $color in $input__modifiers-colors {
+				&--#{$color} {
+					border-color: color(#{$color});
+		
+					&:focus:not(:disabled):not(:read-only),
+					&:active:not(:disabled):not(:read-only) {
+						border-color: color(#{$color});
+						@include box-shadow(0 0 0 3px color(#{$color}, 0.5));
+					}
+				}
+			}
+		}
+
+	}
+}

@@ -1,0 +1,66 @@
+////
+/// Colors variable
+///
+/// You must put all colors here and name them.
+/// @access public
+/// @author Dfront Specialist Team
+/// @example scss color:color(primary);
+///    color : #007bff;
+/// @group Settings
+/// @name color-map
+/// @see $color
+/// @since version 1.0.0
+/// @type Map
+////
+$color-map: (
+	// Project
+	ns-primary			:	#dc3545,
+	ns-secondary		:	#17a2b8,
+	ns-tertiary			:	#333333,
+	ns-main             :   #252d32,
+	white	   	 		:	#ffffff,
+	black	    		:	#000000,
+	disabled			:	#e9ecef,
+	// Default
+	default-lighter		:	#e2e3e5,
+	default-light		:	#d6d8db,
+	default				:	#6c757d,
+	default-dark		:	#5a6268,
+	default-darker		:	#545b62,
+	// Primary
+	primary-lighter		:	#cce5ff,
+	primary-light		:	#b8daff,
+	primary				:	#007bff,	
+	primary-dark		:	#0069d9,
+	primary-darker		:	#0062cc,
+	// Success
+	success-lighter		:	#d4edda,
+	success-light		:	#c3e6cb,
+	success				:	#28a745,
+	success-dark		:	#218838,
+	success-darker		:	#1e7e34,
+	// Danger
+	danger-lighter		:	#f8d7da,
+	danger-light		:	#f5c6cb,
+	danger				:	#dc3545,
+	danger-dark			:	#c82333,
+	danger-darker		:	#bd2130,
+	// Warning
+	warning-lighter		:	#fff3cd,
+	warning-light		:	#ffeeba,
+	warning				:	#ffc107,
+	warning-dark		:	#e0a800,
+	warning-darker		:	#d39e00,
+	// Info
+	info-lighter		:	#d1ecf1,
+	info-light			:	#bee5eb,
+	info				:	#17a2b8,
+	info-dark			:	#138496,
+	info-darker			:	#117a8b,
+	// Darken
+	darken-lighter		:	#d6d8d9,
+	darken-light		:	#c6c8ca,
+	darken				:	#343a40,
+	darken-dark			:	#23272b,
+	darken-darker		:	#1d2124
+);

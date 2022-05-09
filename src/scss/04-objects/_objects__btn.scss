@@ -1,0 +1,111 @@
+/*-------------------------------------------------------------
+    #BUTTONS
+-----------------------------------------------------------------*/
+
+@if $include__btn==true {
+	// Block
+	$btn__display				:	inline		 							!default;
+	$btn__border				:	1px 									!default;
+	$btn__border-style			:	solid 									!default;
+	$btn__border-color			:	color(ns-secondary) 					!default;
+	$btn__text-align			:	center 									!default;
+	$btn__white-space			:	nowrap 									!default;
+	$btn__vertical-align		:	middle 									!default;
+	$btn__padding-x				:	rem(15)									!default;
+	$btn__padding-y				:	rem(8)									!default;
+	$btn__font-family			:	$ns-font-default						!default;
+	$btn__font-size				:	rem($ns-font-size) 				        !default;
+	$btn__line-height			:	1.2										!default;
+	$btn__font-weight			:	400 									!default;
+	$btn__color					:	color(white)						  !default;
+	$btn__background			:	color(primary)							!default;
+	$btn__cursor				:	pointer 								!default;
+	$btn__border-radius			:	3px										!default;
+	$btn__user-select			:	none 									!default;
+	$btn__hover-transition		:	color .15s ease-in-out,
+									background-color .15s ease-in-out,
+									border-color .15s ease-in-out,
+									box-shadow .15s ease-in-out 			!default;
+	$btn__modifiers-colors		:	default primary success danger warning info darken;
+
+	.o-btn,
+	%btn {
+		display			:	$btn__display;
+		padding			:	$btn__padding-y $btn__padding-x;
+		font-family		:	$btn__font-family;
+		font-size		:	$btn__font-size;
+		line-height		:	$btn__line-height;
+		font-weight		:	$btn__font-weight;
+		color			:	$btn__color;
+		text-align		:	$btn__text-align;
+		white-space		:	$btn__white-space;
+		vertical-align	:	$btn__vertical-align;
+		border			:	$btn__border $btn__border-style $btn__border-color;
+		cursor			:	$btn__cursor;
+		@include border-radius($btn__border-radius);
+		@include transition($btn__hover-transition);
+		@include user-select($btn__user-select);
+
+		/**
+         * Actions
+         */
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		&:active,
+		&:focus {
+			outline: none;
+		}
+
+		/**
+         * Disabled
+		 */
+
+		&:disabled {
+			color: color(default);
+			background-color: color(default-lighter);
+			border-color: color(default-light);
+			cursor: auto;
+		}
+
+		/**
+         * Modifiers colors
+		 */
+
+		@if $btn__modifiers-colors != none {
+			@each $color in $btn__modifiers-colors {
+				&--#{$color} {
+					color: color(white);
+					background-color: color(#{$color});
+					border-color: color(#{$color});
+	
+					&:hover {
+						background-color: color(#{$color}-dark);
+						border-color: color(#{$color}-darker);
+					}
+					&:focus {
+						@include box-shadow(0 0 0 3px color(#{$color}, 0.5));
+					}
+					&:disabled {
+						color: color(white);
+						background-color: color(#{$color},0.5);
+						border-color: color(#{$color},0.2);
+					}
+				}
+			}
+		}
+
+		/**
+         * Modifiers others
+		 */
+		
+		&--block {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+// END IF

@@ -1,0 +1,24 @@
+include ../_general/_head-builder
+
+doctype html
+<html lang="es" dir="ltr">
+
++m-headBuilder({
+    title:"Front Seed",
+    metaList:{
+        "viewport": "width=device-width, initial-scale=1.0"
+    },
+    cssFiles:[
+        "../libs/dependencies",
+        "../css/front-modules"
+    ],
+    jsFiles:[
+        "../libs/dependencies.js",
+        "../js/front-dev.js",
+    ]
+})
+body
+    block body
+
+//- DON'T REMOVE: This tag close HTML tag to make compatible conditional comments
+</html>

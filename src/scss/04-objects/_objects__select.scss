@@ -1,0 +1,68 @@
+/*-------------------------------------------------------------
+	#ALERTS
+-----------------------------------------------------------------*/
+
+@if $include__select==true {
+
+    $select__position           :   relative                        !default;
+    $select__display            :   block                           !default;
+    $select__width              :   100%                            !default;
+    $select__height             :   rem(38)                         !default;
+    $select__padding-x          :   rem(12)                         !default;
+    $select__padding-y          :   rem(6)                          !default;
+    $select__font-size          :   $ns-font-size                   !default;
+    $select__line-height        :   1.2                             !default;
+    $select__color              :   color(ns-tertiary)              !default;
+    $select__background         :   color(white)                  !default;
+    $select__hover-transition   :   border-color .15s ease-in-out,
+                                    box-shadow .15s ease-in-out     !default;
+    $select__border             :   2px                             !default;
+    $select__border-style       :   solid                           !default;
+    $select__border-color       :   color(default)                  !default;
+    $select__border-radius      :   4px                             !default;
+    $select__resize             :   vertical                        !default;
+
+
+    .o-select,
+    %select {
+        position            :   $select__position;
+        display             :   $select__display;
+        width               :   $select__width;
+        min-height          :   $select__height;
+        padding             :   $select__padding-y $select__padding-x;
+        font-size           :   $select__font-size;
+        line-height         :   $select__line-height;
+        color               :   $select__color;
+        background-color    :   $select__background;
+        border              :   $select__border $select__border-style $select__border-color;
+        @include border-radius($select__border-radius);
+        @include transition($select__hover-transition);
+        resize              :   $select__resize;
+
+        /**
+		 * Actions
+		 */
+
+        &:active:not(:disabled),
+        &:focus:not(:disabled) {
+            outline: 0;
+            border-color: color(primary);
+            @include box-shadow(0 0 0 3px color(primary, 0.5));
+        }
+
+        /**
+		 * Disabled
+		 */
+
+        &:disabled,
+        &:read-only {
+            background-color: color(disabled);
+            border-color: color(default-light);
+        }
+
+        /**
+		 * Modifiers
+		 */
+
+    }
+}

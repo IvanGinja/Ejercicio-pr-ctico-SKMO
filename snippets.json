@@ -1,0 +1,20 @@
+{
+  "Subscription_success7": {
+    "prefix": "subsucc",
+    "scope": "typescript",
+    "body": [
+      "// So basically, we must use async and await to call observable and subscribe to it.",
+      "// By this way we reproduce async code.",
+      "it('should subscribe to ${1:subscription} ', inject([${2:Type}], async (service: ${2:Type}) => {",
+      "   component.${1:subscription}();",
+      "   spyOn(service, '${3:observable}');",
+      "   service.${3:observable}();",
+      "   await fixture.whenStable().then(() => {",
+      "       // Here goes test to obsevable's success",
+      "       expect(component).toBeDefined();",
+      "   });",
+      "}));"
+    ],
+    "description": "Test for success on subscription"
+  }
+}

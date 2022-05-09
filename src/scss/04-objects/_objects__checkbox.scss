@@ -1,0 +1,131 @@
+/*-------------------------------------------------------------
+    #CHECKBOX
+-----------------------------------------------------------------*/
+
+@if $include__checkbox==true {
+
+    $checkbox__display        	:	block             !default;
+    $checkbox__width        	:	100%              !default;
+    $checkbox__margin-bottom   	:	rem(8)            !default;
+
+    .o-checkbox,
+    %checkbox {
+        display                 :   $checkbox__display;
+        width                   :   $checkbox__width;
+        margin-bottom           :   $checkbox__margin-bottom;
+
+        &__ipt {
+            @extend .hide-accessible;
+            height: 0;
+            width: 0;
+
+            &:focus {
+                + .o-checkbox__label {
+                    .o-checkbox__icon {
+                        background-color: color(black,0.1);
+                        border-color: color(primary);
+                        @include box-shadow(0 0 0 3px color(primary,0.5));
+                    }
+                }
+            }
+            &:checked + .o-checkbox__label > .o-checkbox__icon {
+                border: 12px solid color(primary);
+                animation: shrink-bounce 200ms cubic-bezier(.4, .0, .23, 1);
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: rem(-8);
+                    border-right: 3px solid color(black,0);
+                    border-bottom: 3px solid color(black,0);
+                    @include transform(rotate(45deg));
+                    transform-origin: 0 100%;
+                    animation: checkbox-check 125ms 250ms cubic-bezier(.4, .0, .23, 1) forwards;
+                }
+            }
+
+            &:disabled {
+                + .o-checkbox__label,
+                + %checkbox__label {
+                    .o-checkbox__icon,
+                    %checkbox__icon {
+                        background-color: color(disabled);
+                        border-color: color(default-light);
+                    }
+                    .o-checkbox__txt,
+                    %checkbox__txt {
+                        color: color(default-light);
+                    }
+                }
+            }
+        }
+
+        &__label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            @include transition(color 250ms cubic-bezier(.4, .0, .23, 1));
+            
+            &:hover > .o-checkbox__icon {
+                background-color: color(black,0.1);
+            }
+        }
+
+        &__icon {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: rem(12);
+            width: rem(24);
+            height: rem(24);
+            background-color: color(black,0);
+            border: 2px solid color(default);
+            cursor: pointer;
+            @include border-radius(2px);
+            @include transition(all 250ms cubic-bezier(.4, .0, .23, 1));
+        }
+
+        &__txt {
+            font-family: $ns-font-family;
+            font-size: $ns-font-size+px;
+            line-height: $ns-line-height;
+        }
+    }
+}
+
+/**
+ * Animations keyframes
+ */
+
+@keyframes shrink-bounce {
+    0% {
+        @include transform(scale(1));
+    }
+    33% {
+        @include transform(scale(.85));
+    }
+    100% {
+        @include transform(scale(1));
+    }
+}
+
+@keyframes checkbox-check {
+    0% {
+        width: 0;
+        height: 0;
+        border-color: color(white);
+        @include transform(translate3d(0, 0, 0) rotate(45deg));
+    }
+    33% {
+        width: rem(8);
+        height: 0;
+        @include transform(translate3d(0, 0, 0) rotate(45deg));
+    }
+    100% {
+        width: rem(8);
+        height: rem(14);
+        border-color: color(white);
+        @include transform(translate3d(0, -14px, 0) rotate(45deg));
+    }
+}

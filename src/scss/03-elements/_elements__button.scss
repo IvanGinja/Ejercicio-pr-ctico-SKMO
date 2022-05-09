@@ -1,0 +1,12 @@
+////
+/// BUTTON element
+///
+/// Here we got the button styles
+////
+button {
+    border: 0;
+    background-color: color(black,0);
+    &:hover, &:focus, &:active {
+        outline: 0;
+    }
+}

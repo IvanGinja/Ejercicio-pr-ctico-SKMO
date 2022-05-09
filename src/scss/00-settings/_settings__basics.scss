@@ -1,0 +1,41 @@
+///*-------------------------------------------------------------------------
+//   #SETTINGS CONFIG
+//--------------------------------------------------------------------------*/
+
+//	CONTENT THIS FILE:
+//		# NAMESPACE
+//      # CONFIG - FONTS
+//		# BASIC VALUE FOR PROJECT
+//      # CONFIG - SETTINGS
+
+
+
+///*-------------------------------------------------------------------------
+//   	# NAMESPACE
+//--------------------------------------------------------------------------*/
+$ns				:   ns-;
+
+
+
+///*-----------------------------------------------------
+///     # CONFIG - FONTS
+///-----------------------------------------------------*/
+$ns-font-default				: 'Roboto-Regular', Helvetica, sans-serif;
+$ns-font-roboto-thin            : 'Roboto-Thin';
+$ns-font-roboto-light           : 'Roboto-Light';
+$ns-font-roboto-bold            : 'Roboto-Bold';
+$ns-font-roboto-black           : 'Roboto-Black';
+$ns-font-alternative			: 'Source Sans Pro', verdana;
+
+
+
+///*-------------------------------------------------------------------------
+//   	# BASIC VALUE FOR PROJECT
+//--------------------------------------------------------------------------*/
+
+$ns-font-family          :	$ns-font-default;
+$ns-font-size            :	14;
+$ns-line-height          :	1.2;
+$ns-background-color     :	white;
+$ns-path-font            :	"../assets/fonts/";
+$ns-path-img             :	"../assets/img/";

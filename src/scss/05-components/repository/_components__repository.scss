@@ -1,0 +1,72 @@
+////
+/// SIDEBAR component
+///
+/// Description of the component
+///
+/// @access public
+/// @author Dfront Specialist Team
+/// @group components of repository
+/// @name .#{$wf__ns}ninja
+/// @since version 1.0.0
+////
+.#{$ns}repository {
+    display: block;
+    position: relative;
+    font-size: 0;
+
+    &__layout {
+        position: relative;
+        margin: rem(65) 0 0 rem(240);
+    }
+    &__header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    &__sidebar {
+        position: fixed;
+        top: rem(65);
+        left: 0;
+        width: rem(240);
+        height: calc(100vh - 65px);
+        border-right: 1px solid color(default-light);
+        overflow: auto;
+        z-index: 1;
+    }
+    &__block {
+        display: block;
+        width: 100%;
+    }
+    &__title {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &__link {
+        display: inline-block;
+    }
+    &__figure {
+        max-width: rem(200);
+        overflow: hidden;
+        margin: 0 auto;
+        margin-top: rem(50);
+        margin-bottom: rem(50);
+        border-radius: 20%;
+    }
+    &__figure-logo {
+        max-width: rem(50);
+        overflow: hidden;
+        border-radius: 20%;
+        display: inline-block;
+        vertical-align: middle;
+        img {
+            width: 100%;
+        }
+    }
+    &__item {
+        text-align: center;
+    }
+    &__items {
+        display: inline-block;
+    }
+}

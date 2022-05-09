@@ -1,0 +1,53 @@
+/*-------------------------------------------------------------
+    #breadcrumb
+-----------------------------------------------------------------*/
+
+@if $include__breadcrumb==true {
+
+    .o-breadcrumb,
+    %breadcrumb {
+        
+        &__list {
+            font-size: 0;
+        }
+        &__item {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: rem(10);
+                width: rem(6);
+                height: rem(6);
+                border: 1px solid color(ns-tertiary);
+                border-bottom: 0;
+                border-left: 0;
+                @include transform(translate(0,-50%) rotate(45deg));
+            }
+            &:last-child {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+        &__lnk,
+        &__txt {
+            font-size: rem(16);
+            margin-right: rem(24);
+        }
+        &__lnk {
+            color: color(ns-primary);
+            &:hover, &:focus, &:active {
+                color: color(ns-primary);
+                outline: 0;
+                text-decoration: underline;
+            }
+        }
+        &__txt {
+            color: color(ns-tertiary);
+        }
+    }
+}

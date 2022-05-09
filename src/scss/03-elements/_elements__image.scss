@@ -1,0 +1,16 @@
+////
+/// IMG element
+///
+/// This is the imgs' style sheet
+////
+img {
+	max-width 		: 100%;
+	font-style 		: italic;
+	&[width], &[height] {
+		width: auto;
+		height: auto;
+	}
+	figure & {
+		width: 100%;
+	}
+}

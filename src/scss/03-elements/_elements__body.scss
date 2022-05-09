@@ -1,0 +1,12 @@
+////
+/// BODY element
+///
+/// Here we got the body styles
+////
+body {
+	position            		:	relative;
+	font-family         		:	$ns-font-default;
+	color               		:	color(ns-tertiary);
+	background-color    		:	color(white);
+	-webkit-text-size-adjust	:	100%;
+}

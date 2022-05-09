@@ -1,0 +1,112 @@
+/*-------------------------------------------------------------
+    #radio
+-----------------------------------------------------------------*/
+
+@if $include__radio==true {
+
+    $radio__display        	    :	block               !default;
+    $radio__width        	    :	100%                !default;
+    $radio__margin-bottom   	:	rem(8)              !default;
+    // Text
+    $radio__font-family         :   $ns-font-family     !default;
+    $radio__font-size           :   rem($ns-font-size)  !default;
+    $radio__line-height         :   $ns-line-height     !default;
+    $radio__color               :   color(black)      !default;
+
+    .o-radio,
+    %radio {
+        display                 :   $radio__display;
+        width                   :   $radio__width;
+        margin-bottom           :   $radio__margin-bottom;
+
+        &__ipt {
+            @extend .hide-accessible;
+            height: 0;
+            width: 0;
+
+            &:focus {
+                + .o-radio__label {
+                    .o-radio__icon {
+                        background-color: color(black,0.1);
+                        border-color: color(primary);
+                        @include box-shadow(0 0 0 3px color(primary,0.5));
+                    }
+                }
+            }
+            &:checked + .o-radio__label > .o-radio__icon {
+                border: 12px solid color(primary);
+                animation: shrink-bounce 200ms cubic-bezier(.4, .0, .23, 1);
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: rem(10);
+                    height: rem(10);
+                    background-color: color(white);
+                    @include border-radius(100%);
+                    @include transform(translate(-50%,-50%));
+                }
+            }
+            &:disabled {
+                + .o-radio__label,
+                + %radio__label {
+                    .o-radio__icon,
+                    %radio__icon {
+                        background-color: color(disabled);
+                        border-color: color(default-light);
+                    }
+                    .o-radio__txt,
+                    %radio__txt {
+                        color: color(default-light);
+                    }
+                }
+            }
+        }
+
+        &__label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            @include transition(color 250ms cubic-bezier(.4, .0, .23, 1));
+            
+            &:hover > .o-radio__icon {
+                background-color: color(black,0.1);
+            }
+        }
+
+        &__icon {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: rem(24);
+            width: rem(24);
+            height: rem(24);
+            background-color: color(black,0);
+            border: 2px solid color(default);
+            cursor: pointer;
+            @include border-radius(50%);
+            @include transition(all 250ms cubic-bezier(.4, .0, .23, 1));
+        }
+
+        &__txt {
+            font-family     :   $radio__font-family;
+            font-size       :   $radio__font-size;
+            line-height     :   $radio__line-height;
+            color           :   $radio__color;
+        }
+    }
+}
+
+@keyframes shrink-bounce {
+    0% {
+        @include transform(scale(1));
+    }
+    33% {
+        @include transform(scale(.85));
+    }
+    100% {
+        @include transform(scale(1));
+    }
+}

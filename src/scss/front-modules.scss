@@ -1,0 +1,99 @@
+///*-------------------------------------------------------------------------
+//   # FRONT MODULES CONFIG
+//--------------------------------------------------------------------------*/
+//	CONTENT THIS FILE:
+//		# IMPORT FILE CONFIG SCSS
+//      # SETTINGS
+//		# TOOLS
+//      # GENERIC
+//		# BASE
+//		# OBJETCS
+//      # COMPONENTS
+//      # TRUMPS
+//*--------------------------------------------------------
+//    # SETTINGS
+//----------------------------------------------------------*/
+@import '00-settings/_settings__basics';
+@import '00-settings/_settings__colors';
+@import '00-settings/_settings__responsive';
+@import '00-settings/_settings__headings';
+@import '00-settings/_settings__grid-reflex';
+@import '00-settings/_settings__trumps';
+@import '00-settings/_settings__objects';
+
+//*----------------------------------------------------------
+//    # TOOLS
+//----------------------------------------------------------*/
+@import '01-tools/_tools__border-radius';
+@import '01-tools/_tools__box-shadow';
+@import '01-tools/_tools__colors';
+@import '01-tools/_tools__fonts';
+@import '01-tools/_tools__pixel-to-em';
+@import '01-tools/_tools__pixel-to-rem';
+@import '01-tools/_tools__responsive';
+@import '01-tools/_tools__transform';
+@import '01-tools/_tools__transition';
+@import '01-tools/_tools__truncate';
+@import '01-tools/_tools__user-select';
+@import '01-tools/_tools__z-index';
+//*----------------------------------------------------------
+//     # GENERIC
+// ----------------------------------------------------------*/
+// Import files grid reflex
+@import '02-generic/reflex/_mixins';
+@import '02-generic/reflex/_grid';
+@import '02-generic/reflex/_helpers';
+// End import files grid reflex
+@import "02-generic/_generic__accessible";
+@import "02-generic/_generic__box-sizing";
+@import "02-generic/_generic__fonts";
+@import "02-generic/_generic__reset";
+//*----------------------------------------------------------
+//     # BASE
+// ----------------------------------------------------------*/
+@import '03-elements/_elements__a';
+@import '03-elements/_elements__body';
+@import '03-elements/_elements__button';
+@import '03-elements/_elements__headings';
+@import '03-elements/_elements__html';
+@import '03-elements/_elements__image';
+@import '03-elements/_elements__lists';
+@import '03-elements/_elements__scrollbar';
+// /*----------------------------------------------------------
+//     # OBJECTS
+// ----------------------------------------------------------*/
+@import '04-objects/_objects__alert';
+@import '04-objects/_objects__breadcrumb';
+@import '04-objects/_objects__btn';
+@import '04-objects/_objects__card';
+@import '04-objects/_objects__checkbox';
+@import '04-objects/_objects__form-control';
+@import '04-objects/_objects__input';
+@import '04-objects/_objects__radio';
+@import '04-objects/_objects__select';
+@import '04-objects/_objects__table';
+@import '04-objects/_objects__title';
+@import '04-objects/_objects__txt';
+
+// /*----------------------------------------------------------
+//     # COMPONENTS
+// ----------------------------------------------------------*/   
+@import '05-components/_components__example.scss';
+
+// /*----------------------------------------------------------
+//     # COMPONENTS REPOSITORY
+// ----------------------------------------------------------*/
+@import '05-components/repository/_components__box.scss';
+@import '05-components/repository/_components__grid.scss';
+@import '05-components/repository/_components__repository.scss';
+@import '05-components/repository/_components__sidebar.scss';
+@import '05-components/repository/_components__header.scss';
+
+//*----------------------------------------------------------
+//     # TRUMPS
+// ----------------------------------------------------------*/
+@import '06-trumps/_trumps__colors';
+@import '06-trumps/_trumps__display';
+@import '06-trumps/_trumps__margin';
+@import '06-trumps/_trumps__padding';
+@import '06-trumps/_trumps__text-align';

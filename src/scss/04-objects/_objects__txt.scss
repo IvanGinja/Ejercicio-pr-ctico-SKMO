@@ -1,0 +1,32 @@
+/*-------------------------------------------------------------
+    #TEXT
+-----------------------------------------------------------------*/
+
+@if $include__txt==true {
+
+    $txt__font-family           :   $ns-font-default            !default;
+    $txt__font-size             :   rem($ns-font-size)          !default;
+    $txt__line-height           :   1.4                         !default;
+    $txt__font-weight           :   400                         !default;
+    $txt__color                 :   color(black)              !default;
+
+    .o-txt,
+	%txt {
+        font-family     :   $txt__font-family;
+        font-size       :   $txt__font-size;
+        line-height     :   $txt__line-height;
+        font-weight     :   $txt__font-weight;
+        color           :   $txt__color;
+
+        /**
+         * Modifiers others
+         */
+
+        &--link {
+            color: color(ns-primary);
+        }
+        &--bold {
+            font-weight: bold;
+        }
+    }
+}

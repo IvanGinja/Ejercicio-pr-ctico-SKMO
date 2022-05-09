@@ -1,0 +1,32 @@
+////
+/// BOX component
+///
+/// Description of the component
+///
+/// @access public
+/// @author Dfront Specialist Team
+/// @group components of repository
+/// @name .#{$wf__ns}box
+/// @since version 1.0.0
+////
+.#{$ns}box {
+    position: relative;
+    height: 100%;
+    background-color: color(white);
+
+    &__header {
+        padding: rem(65) 0 rem(15) 0;
+    }
+    &__title {
+        font-family: $ns-font-roboto-light;
+        font-size: rem(48);
+        font-weight: 300;
+        line-height: rem(48 + 4);
+        color: color(black);
+    }
+    &__container-btn {
+        button {
+            margin-right: rem(4);
+        }
+    }
+}

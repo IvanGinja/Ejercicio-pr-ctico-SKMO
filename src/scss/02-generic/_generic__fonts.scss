@@ -1,0 +1,63 @@
+////
+/// Fonts
+///
+/// This class is used for font load
+///
+/// @access public
+/// @author Dfront Specialist Team
+/// @group Generic
+/// @since version 1.0.0
+////
+//* Example for use @font-face
+//
+//	@include font-face([name-font],
+//		$ns-path-font+'[name-font]',
+//		[font-weight],
+//		[font-style],
+//		[type-font(eot | woff | svg | ttf)]
+//	);
+//
+//*/
+// Font-awesome
+$fa-font-path: $ns-path-font+'font-awesome';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import '../../../node_modules/@fortawesome/fontawesome-free/scss/regular';
+// Roboto
+@include font-face('Roboto-Thin',
+    $ns-path-font + 'Roboto/Roboto-Thin',
+    '100',
+    'normal',
+    'ttf'
+);
+@include font-face('Roboto-Light',
+    $ns-path-font + 'Roboto/Roboto-Light',
+    '300',
+    'normal',
+    'ttf'
+);
+@include font-face('Roboto-Regular',
+    $ns-path-font + 'Roboto/Roboto-Regular',
+    '400',
+    'normal',
+    'ttf'
+);
+@include font-face('Roboto-Medium',
+    $ns-path-font + 'Roboto/Roboto-Medium',
+    '500',
+    'normal',
+    'ttf'
+);
+@include font-face('Roboto-Bold',
+    $ns-path-font + 'Roboto/Roboto-Bold',
+    '700',
+    'normal',
+    'ttf'
+);
+@include font-face('Roboto-Black',
+    $ns-path-font + 'Roboto/Roboto-Black',
+    '900',
+    'normal',
+    'ttf'
+);

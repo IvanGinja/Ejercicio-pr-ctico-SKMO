@@ -1,0 +1,81 @@
+////
+/// MARGIN trump
+///
+/// This is the margin triumphs styles
+////
+@if $include__trump--margin{
+
+    @for $i from $ns-trumps-margin-init through $ns-trumps-margin-end{
+        $value : $i*$ns-trumps-margin-steps;
+/// Margin trump
+/// @access public
+/// @author Dfront Specialist Team
+/// @group trumps
+/// @name .t-margin-#{$value}
+/// @see ns-trumps-margin-init
+/// @see ns-trumps-margin-steps
+/// @see ns-trumps-margin-end
+/// @since version 1.0.0
+
+        .t-margin-#{$value}{
+            margin: #{$value}px !important;
+        }
+
+/// Margin top trump
+/// @access public
+/// @author Dfront Specialist Team
+/// @group trumps
+/// @name .t-margin-top-#{$value}
+/// @see ns-trumps-margin-init
+/// @see ns-trumps-margin-steps
+/// @see ns-trumps-margin-end
+/// @since version 1.0.0
+
+        .t-margin-top-#{$value}{
+            margin-top: #{$value}px !important;
+        }
+
+/// Margin right trump
+/// @access public
+/// @author Dfront Specialist Team
+/// @group trumps
+/// @name .t-margin-right-#{$value}
+/// @see ns-trumps-margin-init
+/// @see ns-trumps-margin-steps
+/// @see ns-trumps-margin-end
+/// @since version 1.0.0
+
+        .t-margin-right-#{$value}{
+            margin-right: #{$value}px !important;
+        }
+
+/// Margin bottom trump
+/// @access public
+/// @author Dfront Specialist Team
+/// @group trumps
+/// @name .t-margin-bottom-#{$value}
+/// @see ns-trumps-margin-init
+/// @see ns-trumps-margin-steps
+/// @see ns-trumps-margin-end
+/// @since version 1.0.0
+
+        .t-margin-bottom-#{$value}{
+            margin-bottom: #{$value}px !important;
+        }
+
+/// Margin left trump
+/// @access public
+/// @author Dfront Specialist Team
+/// @group trumps
+/// @name .t-margin-left-#{$value}
+/// @see ns-trumps-margin-init
+/// @see ns-trumps-margin-steps
+/// @see ns-trumps-margin-end
+/// @since version 1.0.0
+
+        .t-margin-left-#{$value}{
+            margin-left: #{$value}px !important;
+        }
+    }
+
+}// end if

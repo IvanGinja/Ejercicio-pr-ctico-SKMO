@@ -1,0 +1,72 @@
+/*-------------------------------------------------------------
+    #TITLES
+-----------------------------------------------------------------*/
+
+@if $include__title == true {
+    // Block
+    $title__font-family             :	$ns-font-family             !default;
+    $title__font-size               :   rem($ns-font-size)          !default;
+    $title__line-height             :   1.4                         !default;
+    $title__font-weight             :   400                         !default;
+    $title__color                   :   color(black)              !default;
+    // Modifiers
+    $title__color-link              :   color(primary)              !default;
+    $title__font-size-h1            :   rem($ns-h1)                 !default;
+    $title__font-size-h2            :   rem($ns-h2)                 !default;
+    $title__font-size-h3            :   rem($ns-h3)                 !default;
+    $title__font-size-h4            :   rem($ns-h4)                 !default;
+    $title__font-size-h5            :   rem($ns-h5)                 !default;
+    $title__font-size-h6            :   rem($ns-h6)                 !default;
+    $title__line-height-h1          :   1.2                         !default;
+    $title__line-height-h2          :   1.2                         !default;
+    $title__line-height-h3          :   1.2                         !default;
+    $title__line-height-h4          :   1.2                         !default;
+    $title__line-height-h5          :   1.2                         !default;
+    $title__line-height-h6          :   1.2                         !default;
+
+	.o-title,
+	%title {
+        font-family				:   $title__font-family;
+        font-size               :   $title__font-size;
+        line-height             :   $title__line-height;
+        font-weight             :   $title__font-weight;
+        color                   :   $title__color;
+
+		/**
+         * Modifiers size
+         */
+
+        &--h1 {
+            font-size: $title__font-size-h1;
+            line-height: $title__line-height-h1;
+        }
+        &--h2 {
+            font-size: $title__font-size-h2;
+            line-height: $title__line-height-h2;
+        }
+        &--h3 {
+            font-size: $title__font-size-h3;
+            line-height: $title__line-height-h3;
+        }
+        &--h4 {
+            font-size: $title__font-size-h4;
+            line-height: $title__line-height-h4;
+        }
+        &--h5 {
+            font-size: $title__font-size-h5;
+            line-height: $title__line-height-h5;
+        }
+        &--h6 {
+            font-size: $title__font-size-h6;
+            line-height: $title__line-height-h6;
+        }
+
+        /**
+         * Modifiers others
+         */
+
+        &--link{
+            color: $title__color-link;
+        }
+    }
+} // END IF

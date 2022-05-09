@@ -1,0 +1,98 @@
+/*-------------------------------------------------------------
+    #radio
+-----------------------------------------------------------------*/
+
+@if $include__card==true {
+    
+    $card__display                      :   block                   !default;
+    $card__width                        :   100%                    !default;
+    $card__background-color             :   color(white)          !default;
+    $card__border-width                 :   1px                     !default;
+    $card__border-style                 :   solid                   !default;
+    $card__border-color                 :   color(default-light)    !default;
+    $card__border-radius                :   0                       !default;
+    $card__box-shadow                   :   0 0 10px color(black,0.2)!default;
+    // Element __header
+    $card__header-height                :   rem(180)                !default;
+    // Element __container
+    $card__container-padding-x          :   rem(20)                 !default;
+    $card__container-padding-y          :   rem(20)                 !default;
+    // Element __title
+    $card__title-margin-bottom          :   rem(12)                 !default;
+    $card__title-font-size              :   rem(24)                 !default;
+    $card__title-font-weight            :   500                     !default;
+    $card__title-line-height            :   1.2                     !default;
+    $card__title-color                  :   color(black)          !default;
+    // Element __subtitle
+    $card__subtitle-margin-bottom       :   rem(12)                 !default;
+    $card__subtitle-font-size           :   rem(16)                 !default;
+    $card__subtitle-font-weight         :   500                     !default;
+    $card__subtitle-line-height         :   1.2                     !default;
+    $card__subtitle-color               :   color(default)          !default;
+    // Element __txt
+    $card__txt-margin-bottom            :   rem(12)                 !default;
+    $card__txt-font-size                :   rem(16)                 !default;
+    $card__txt-font-weight              :   500                     !default;
+    $card__txt-line-height              :   1.2                     !default;
+    $card__txt-color                    :   color(black)          !default;
+    // Element __link
+    $card__link-font-size               :   rem(16)                 !default;
+    $card__link-font-weight             :   500                     !default;
+    $card__link-line-height             :   1.2                     !default;
+    $card__link-color                   :   color(primary)          !default;
+
+    .o-card,
+	%card {
+        display             : $card__display;
+        width               : $card__width;
+        background-color    : $card__background-color;
+        border              : $card__border-width $card__border-style $card__border-color;
+        @include border-radius($card__border-radius);
+        @include box-shadow($card__box-shadow);
+
+        &__header {
+            position    : relative;
+            height      : $card__header-height;
+            overflow    : hidden;
+        }
+        &__image {
+            position    : absolute;
+            top         : 50%;
+            width       : 100%;
+            @include transform(translateY(-50%));
+        }
+        &__container {
+            padding: $card__container-padding-y $card__container-padding-y;
+        }
+        &__title {
+            margin-bottom   : $card__title-margin-bottom;
+            font-size       : $card__title-font-size;
+            font-weight     : $card__title-font-weight;
+            line-height     : $card__title-line-height;
+            color           : $card__title-color;
+        }
+        &__subtitle {
+            margin-bottom   : $card__subtitle-margin-bottom;
+            font-size       : $card__subtitle-font-size;
+            font-weight     : $card__subtitle-font-weight;
+            line-height     : $card__subtitle-line-height;
+            color           : $card__subtitle-color;
+        }
+        &__txt {
+            margin-bottom   : $card__txt-margin-bottom;
+            font-size       : $card__txt-font-size;
+            font-weight     : $card__txt-font-weight;
+            line-height     : $card__txt-line-height;
+            color           : $card__txt-color;
+        }
+        &__footer {
+            padding: 0 $card__container-padding-x $card__container-padding-y $card__container-padding-x; 
+        }
+        &__lnk {
+            font-size       : $card__link-font-size;
+            font-weight     : $card__link-font-weight;
+            line-height     : $card__link-line-height;
+            color           : $card__link-color;
+        }
+    }
+}

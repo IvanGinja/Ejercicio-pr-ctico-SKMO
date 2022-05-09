@@ -1,0 +1,78 @@
+/*-------------------------------------------------------------
+    #TABLE
+-----------------------------------------------------------------*/
+
+@if $include__table==true {
+
+    $table__width                 :   100%                      !default;
+    $table__table-layout          :   auto                      !default;
+    $table__font-family           :   $ns-font-default          !default;
+    $table__font-size			  :   rem($ns-font-size) 	    !default;
+    $table__text-align            :   left                      !default;
+    $table__title-font-weight     :   bold                      !default;
+    $table__padding-vertical      :   rem(15)                   !default;
+    $table__padding-horitonzal    :   rem(15)                   !default;
+    // Border tr
+    $table__tr-border-width       :   1px                       !default;
+    $table__tr-border-style       :   solid                     !default;
+    $table__tr-border-color       :   color(default-light)      !default;
+    $table__tr-border-last-none   :   true                      !default;
+    // Modifier striped
+    $table__nth-of-type           :   odd                       !default;
+    $table__striped-bg            :   color(default-lighter)    !default;
+
+    .o-table,
+	%table {
+        width           :   $table__width;
+        table-layout    :   $table__table-layout;
+
+        &__tr {
+            border-bottom: $table__tr-border-width $table__tr-border-style $table__tr-border-color;
+
+            @if $table__tr-border-last-none == true {
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+        &__th {
+            font-weight     :   $table__title-font-weight;
+        }
+        &__th,
+        &__td {
+            padding         :   $table__padding-vertical $table__padding-horitonzal;
+            font-family     :   $table__font-family;
+            font-size       :   $table__font-size;
+            text-align      :   $table__text-align;
+        }
+
+        &--striped {
+            @if $table__nth-of-type == 'odd' {
+                .o-table, %table {
+                    &__tbody {
+                        .o-table, %table {
+                            &__tr {
+                                &:nth-of-type(odd) {
+                                    background-color: $table__striped-bg
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @if $table__nth-of-type == 'even' {
+                .o-table, %table {
+                    &__tbody {
+                        .o-table, %table {
+                            &__tr {
+                                &:nth-of-type(even) {
+                                    background-color: $table__striped-bg
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

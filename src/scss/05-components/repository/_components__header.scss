@@ -1,0 +1,57 @@
+////
+/// HEADER component
+///
+/// Description of the component
+///
+/// @access public
+/// @author Dfront Specialist Team
+/// @group components of repository
+/// @name .#{$wf__ns}header
+/// @since version 1.0.0
+////
+.#{$ns}header {
+    display: block;
+    width: 100%;
+    padding: rem(10) rem(30);
+    height: rem(65);
+    background: color(ns-main);
+    &__link {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &__figure {
+        width: rem(45);
+        height: rem(45);
+        display: inline-block;
+        vertical-align: middle;
+    }
+    &__image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    &__title {
+        color: color(danger);
+        font-size: rem(18);
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: rem(15);
+        &:not(:last-child) {
+            &:after {
+                content: '•';
+                display: inline-block;
+                margin-left: rem(15);
+                margin-right: rem(15);
+            }
+        }
+    }
+    &__txt {
+        display: inline-block;
+        vertical-align: middle;
+        color: color(white);
+        font-size: rem(16);
+        font-weight: 100;
+    }
+}

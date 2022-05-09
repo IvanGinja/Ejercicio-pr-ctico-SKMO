@@ -1,0 +1,23 @@
+mixin m-headBuilder(params)
+    mixin _generateCssLinks(cssFiles)
+        if(cssFiles != undefined)
+            each cssFile in cssFiles
+                link(rel="stylesheet", type="text/css" href=cssFile + ".css")
+    mixin _generateJsTags(jsFiles)
+        if(jsFiles != undefined)
+            each jsFile in jsFiles
+                script(defer, src=jsFile)
+    head
+        block title
+            title= params.title
+
+        // META tags
+        meta(charset=(params.codification || "UTF-8"))
+        each val, meta in params.metaList
+            meta(name=meta, content=val)
+        // CSS Files
+        if params.cssFiles != undefined && params.cssFiles.length > 0
+            +_generateCssLinks(params.cssFiles)
+        // JS Files
+        if params.jsFiles != undefined && params.jsFiles.length > 0
+            +_generateJsTags(params.jsFiles)

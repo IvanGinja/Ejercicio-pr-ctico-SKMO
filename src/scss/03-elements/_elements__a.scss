@@ -1,0 +1,10 @@
+////
+/// A element
+///
+/// Here we got the a styles
+////
+a {
+    &:focus, &:active {
+        outline: 0;
+    }
+}

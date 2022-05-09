@@ -1,0 +1,130 @@
+/*-------------------------------------------------------------
+    #ALERTS
+-----------------------------------------------------------------*/
+
+@if $include__alert==true {
+	// Block
+	$alert__position				:	relative 				!default;
+	$alert__padding-y				:	rem(12)					!default;
+	$alert__padding-x				:	rem(20)					!default;
+	$alert__margin-y				:	rem(12)					!default;
+	$alert__border					:	1px						!default;
+	$alert__border-style			:	solid					!default;
+	$alert__border-color			:	color(black)	  	  !default;
+	$alert__border-radius			:	4px						!default;
+	// Element __txt
+	$alert__font-size				:	rem($ns-font-size)		!default;
+	$alert__line-height				:	1.2						!default;
+	$alert__font-weight				:	400						!default;
+	$alert__color					:	color(black)		  !default;
+	$alert__txt-margin-bottom		:	rem(4)					!default;			
+	// Element __close
+	$alert__close-font-size			:	rem(22)					!default;
+	$alert__close-line-height		:	1.2						!default;
+	$alert__close-color				:	color(default)			!default;
+	$alert__close-position			:	absolute				!default;
+	$alert__close-top				:	rem(10)					!default;
+	$alert__close-bottom			:	auto					!default;
+	$alert__close-left				:	auto					!default;
+	$alert__close-right				:	rem(10)					!default;
+	$alert__close-width				:	rem(20)					!default;
+	$alert__close-height			:	rem(20)					!default;
+	$alert__close-pointer			:	pointer					!default;
+	$alert__close-border			:	color(black,0)		  !default;
+	$alert__close-background-color	:	color(black,0)		  !default;
+	$alert__close-color-hover		:	color(default-darker)	!default;
+	// Element __icon
+	$alert__icon-padding-left		:	rem(50)					!default;
+	$alert__icon-font-size			:	rem(20)					!default;
+	$alert__icon-top				:	rem(12)					!default;
+	$alert__icon-left				:	rem(14)					!default;
+	$alert__icon-min-width			:	rem(20)					!default;
+    $alert__icon-text-align			:	center					!default;
+	// Modifier colors
+	$alert__colors					:	default primary success danger warning info darken	!default;
+
+	.o-alert,
+	%alert {
+		position			:	$alert__position;
+		padding				:	$alert__padding-y $alert__padding-x;
+		margin-bottom		:	$alert__margin-y;
+		border				:	$alert__border $alert__border-style $alert__border-color;
+		@include border-radius($alert__border-radius);
+		
+		/*
+		* Elements
+		*/
+		
+		&__txt {
+			margin-bottom		: 	$alert__txt-margin-bottom;
+			font-size			:	$alert__font-size;
+			line-height			:	$alert__line-height;
+			font-weight			:	$alert__font-weight;
+			color				:	$alert__color;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&__close {
+			position			:	$alert__close-position;
+			top					:	if($alert__close-top == auto, auto, $alert__close-top);
+			bottom				:	if($alert__close-bottom == auto, auto, $alert__close-bottom);
+			right				:	if($alert__close-right == auto, auto, $alert__close-right);
+			left				:	if($alert__close-left == auto, auto, $alert__close-left);
+			width				:	$alert__close-width;
+			height				:	$alert__close-height;
+			margin				:	0;
+			padding				:	0;
+			font-size			:	$alert__close-font-size;
+			line-height			:	$alert__close-line-height;
+			color				:	$alert__close-color;
+			border				:	$alert__close-border;
+			background-color	:	$alert__close-background-color;
+			cursor				:	$alert__close-pointer;
+
+			&:hover,
+			&:focus,
+			&:active {
+				outline: 0;
+				color: $alert__close-color-hover;
+			}
+		}
+
+		&__icon {
+			position		:	absolute;
+			top				:	$alert__icon-top;
+			left			:	$alert__icon-left;
+			font-size		:	$alert__icon-font-size;
+			min-width		:	$alert__icon-min-width;
+    		text-align		:	$alert__icon-text-align;
+		}
+
+		/**
+		 * Modifiers others
+		 */
+
+		&--close {
+			padding-right: rem(40);
+		}
+
+		&--icon {
+			padding-left: $alert__icon-padding-left;
+		}
+
+		/**
+		 * Modifiers colors
+		 */
+
+		@if $alert__colors != none {
+			@each $color in $alert__colors {
+				&--#{$color} {
+					color: color(#{$color});
+					background-color: color(#{$color}-lighter);
+					border-color: color(#{$color}-light);
+				}
+			}
+		}
+	}
+}

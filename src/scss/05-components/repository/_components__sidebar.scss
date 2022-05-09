@@ -1,0 +1,51 @@
+////
+/// SIDEBAR component
+///
+/// Description of the component
+///
+/// @access public
+/// @author Dfront Specialist Team
+/// @group components of repository
+/// @name .#{$wf__ns}sidebar
+/// @since version 1.0.0
+////
+.#{$ns}sidebar {
+
+    &__item {
+        margin-bottom: rem(12);
+    }
+    &__txt {
+        display: block;
+        padding: rem(12) rem(20) rem(12) rem(30);
+        font-family: $ns-font-roboto-bold;
+        font-size: rem(16);
+        color: color(black);
+    }
+    &__link {
+        position: relative;
+        display: block;
+        padding: rem(12) rem(20) rem(12) rem(30);
+        font-size: rem(14);
+        color: color(default);
+        &--selected {
+            color: color(black);
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: rem(20);
+                width: rem(8);
+                height: rem(8);
+                background-color: color(danger);
+                @include border-radius(100%);
+                @include transform(translateY(-50%));
+            }
+        }
+        &:hover,
+        &:focus {
+            outline: 0;
+            text-decoration: none;
+            color: color(black);
+        }
+    }
+}

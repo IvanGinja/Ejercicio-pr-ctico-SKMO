@@ -1,0 +1,21 @@
+////
+/// SIDEBAR component
+///
+/// Description of the component
+///
+/// @access public
+/// @author Dfront Specialist Team
+/// @group components of repository
+/// @name .#{$wf__ns}grid
+/// @since version 1.0.0
+////
+
+.#{$ns}grid-container {
+    height: 100%;
+    padding: rem(10);
+    font-size: rem(14);
+    line-height: 1;
+    color: color(white);
+    background-color: color(primary);
+    @include box-shadow(0 0 0 4px color(primary, 0.5));
+}

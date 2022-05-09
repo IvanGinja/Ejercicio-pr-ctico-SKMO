@@ -1,0 +1,72 @@
+/*-------------------------------------------------------------
+    #FORM-CONTROL
+-----------------------------------------------------------------*/
+
+@if $include__form-control == true {
+    // Block
+    $form-control__display				:	block 			    		        !default;
+    $form-control__position				:	relative 					        !default;
+    $form-control__margin-bottom		:	rem(20) 				            !default;
+    // Element __label
+    $form-control__label-display        :   inline-block                        !default;
+    $form-control__label-margin-bottom  :   rem(2)                              !default;
+    $form-control__font-size            :   rem($ns-font-size)                  !default;
+    $form-control__font-weight          :   bold                                !default;
+    $form-control__line-height          :   1.2                                 !default;
+    $form-control__cursor               :   pointer                             !default;
+    // Element __msg
+    $form-control__msg-display          :   none                                !default;
+    $form-control__msg-margin-top       :   rem(2)                              !default;
+    $form-control__msg-font-size        :   rem(12)                             !default;
+    $form-control__msg-line-height      :   1.2                                 !default;
+    $form-control__msg-font-weight      :   bold                                !default;
+    $form-control__truncate             :   true                                !default;
+    // Modifiers --colors
+    $form-control__modifiers-colors		:	default primary success danger warning info darken	!default;
+
+    .o-form-control,
+	%form-control {
+        position            :   $form-control__position;
+        display             :   $form-control__display;
+        margin-bottom       :   $form-control__margin-bottom;
+
+        &__label {
+            display         :   $form-control__label-display;
+            margin-bottom   :   $form-control__label-margin-bottom;
+            font-size       :   $form-control__font-size;
+            line-height     :   $form-control__line-height;
+            font-weight     :   $form-control__font-weight;
+            cursor          :   $form-control__cursor;
+        }
+        &__msg {
+            display         :   $form-control__msg-display;
+            position        :   absolute;
+            top             :   100%;
+            left            :   0;
+            width           :   100%;
+            margin-top      :   $form-control__msg-margin-top;
+            font-size       :   $form-control__msg-font-size;
+            line-height     :   $form-control__msg-line-height;
+            font-weight     :   $form-control__msg-font-weight;
+            @if $form-control__truncate == true {
+                @include truncate();
+            }
+        }
+        
+        /**
+         * Modifiers colors
+         */
+
+        @if $form-control__modifiers-colors != none {
+            @each $color in $form-control__modifiers-colors {
+                &--#{$color} {
+                    .o-form-control__msg,
+                    %form-control__msg {
+                        display     : block;
+                        color       : color(#{$color});
+                    }
+                }
+            }
+        }
+    }
+}
