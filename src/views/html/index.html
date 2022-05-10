@@ -24,7 +24,15 @@
       <!-- MENU -->
       <nav class="sk-nav-menu">
         <button class="sk-header__bars-menu">BOTON<i class=""></i></button>
-        <ul class="sk-nav-menu__list">
+        <div class="sk-nav-menu__search">
+          <form action="sk-nav-menu__search-content">
+            <div class="sk-nav-menu__input-content">
+              <input class="sk-nav-menu__data-entry" type="search" />
+            </div>
+            <input class="sk-nav-menu__send-data" type="submit" value="lupa" />
+          </form>
+        </div>
+        <ul class="sk-nav-menu__list" role="menu">
           <li class="sk-nav-menu__item">
             <i class="sk-nav-menu__icon"></i>
             <a href="" class="sk-nav-menu__link">Inicio</a>
@@ -48,15 +56,86 @@
       </nav>
 
       <div class="sk-nav-menu__user">
-            <i class="sk-nav__icon"></i>
-            <figure class="sk-nav-menu__icon">
-                <img class="sk-nav-menu__link" src="" alt="Imagen del menu login de usuario">
-            </figure>
+        <i class="sk-nav__icon"></i>
+        <figure class="sk-nav-menu__icon">
+          <img
+            class="sk-nav-menu__link"
+            src=""
+            alt="Imagen del menu login de usuario"
+          />
+        </figure>
+        <i class="sk-nav-menu__icon"></i>
       </div>
     </header>
 
-    <main class="main">
-
+    <main class="sk-main">
+      <div class="sk-main__primary-content sk-primary-conten">
+        <section class="sk-primary-conten__cards" aria-label="Eventos">
+          <header class="sk-primary-conten__head-card">
+            <div class="sk-primary-conten__title">
+              <i class="sk-primary-conten__icon fa-regular fa-calendar-days"></i>
+              <p class="sk-primary-conten__text">Eventos</p>
+            </div>
+            <button class="sk-primary-conten__options">
+              <i class="sk-primary-conten__icon"></i>
+            </button>
+          </header>
+          <div class="sk-primary-conten__card-content"></div>
+          <footer class="sk-primary-conten__foot-card"></footer>
+        </section>
+        <section class="sk-primary-conten__cards" aria-label="Notificaciones">
+          <header class="sk-primary-conten__head-card">
+            <div class="sk-primary-conten__title">
+              <i class="sk-primary-conten__icon"></i>
+              <p class="sk-primary-conten__text"></p>
+            </div>
+            <button class="sk-primary-conten__options">
+              <i class="sk-primary-conten__icon"></i>
+            </button>
+          </header>
+          <div class="sk-primary-conten__card-content"></div>
+          <footer class="sk-primary-conten__foot-card"></footer>
+        </section>
+        <section class="sk-primary-conten__cards" aria-label="Mails">
+          <header class="sk-primary-conten__head-card">
+            <div class="sk-primary-conten__title">
+              <i class="sk-primary-conten__icon"></i>
+              <p class="sk-primary-conten__text"></p>
+            </div>
+            <button class="sk-primary-conten__options">
+              <i class="sk-primary-conten__icon"></i>
+            </button>
+          </header>
+          <div class="sk-primary-conten__card-content"></div>
+          <footer class="sk-primary-conten__foot-card"></footer>
+        </section>
+        <section class="sk-primary-conten__cards" aria-label="Proyectos">
+          <header class="sk-primary-conten__head-card">
+            <div class="sk-primary-conten__title">
+              <i class="sk-primary-conten__icon"></i>
+              <p class="sk-primary-conten__text"></p>
+            </div>
+            <button class="sk-primary-conten__options">
+              <i class="sk-primary-conten__icon"></i>
+            </button>
+          </header>
+          <div class="sk-primary-conten__card-content"></div>
+          <footer class="sk-primary-conten__foot-card"></footer>
+        </section>
+        <section class="sk-primary-conten__cards" aria-label="Mis contactos">
+          <header class="sk-primary-conten__head-card">
+            <div class="sk-primary-conten__title">
+              <i class="sk-primary-conten__icon"></i>
+              <p class="sk-primary-conten__text"></p>
+            </div>
+            <button class="sk-primary-conten__options">
+              <i class="sk-primary-conten__icon"></i>
+            </button>
+          </header>
+          <div class="sk-primary-conten__card-content"></div>
+          <footer class="sk-primary-conten__foot-card"></footer>
+        </section>
+      </div>
     </main>
   </body>
 </html>
