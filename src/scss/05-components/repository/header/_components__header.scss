@@ -1,0 +1,36 @@
+////
+/// HEADER component
+///
+/// Description of the component
+///
+/// @access public
+/// @author Dfront Specialist Team
+/// @group components of repository
+/// @name .#{$wf__ns}header
+/// @since version 1.0.0
+////
+.#{$ns}header {
+    
+    width: 100%;
+    background: linear-gradient( 90deg, color(ns-main) 0%, color(ns-tertiary) 100% );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    &__picture-desktop {
+        display: none;
+    }
+
+    &__picture-mobile {
+        width: rem(40);
+    }
+
+    &__link {}
+
+    &__content {}
+
+    &__sub-menu {
+        display: flex;
+        width: rem(100);
+    }
+}
