@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <script src="https://kit.fontawesome.com/e8efdb4c02.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/39ae60f305.js" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="../css/front-modules.css" />
@@ -15,24 +15,26 @@
 <body>
   <header class="sk-header">
     <!-- DESKOPT LOGO -->
-    <div class="sk-header__picture-desktop">
+    <figure class="sk-header__picture sk-header__picture--hidden">
       <a href="" class="sk-header__link">
-        <figure class="sk-header__content">
-          <img class="sk-header__logo" src="../../assets/images/DeskoptLogo.png" alt="Logo everis" />
-        </figure>
+        <img class="sk-header__logo" src="../../assets/images/DeskoptLogo.png" alt="Logo everis" />
       </a>
-    </div>
+    </figure>
 
-    <!-- MENU DESKOPT -->
-    <nav class="sk-nav-menu">
-      <div class="sk-nav-menu__search">
-        <form action="sk-nav-menu__search-content">
-          <div class="sk-nav-menu__input-content">
-            <input class="sk-nav-menu__data-entry" type="search" />
-          </div>
-          <input class="sk-nav-menu__send-data" type="submit" value="lupa" />
-        </form>
-      </div>
+    <!-- MOBILE LOGO -->
+    <figure class="sk-header__picture" aria-flowto="i2">
+      <a href="" class="sk-header__link">
+        <img class="sk-header__logo" src="../../assets/images/MobileLogo.png" alt="Logo everis" />
+      </a>
+    </figure>
+
+  
+
+    <!-- MENU -->
+    <nav class="sk-nav-menu" aria-flowto="i1">
+      <button class="sk-nav-menu__mobile-menu" role="menu" aria-label="Despegable">
+        <i class="sk-nav-menu__icon fa-solid fa-bars"></i>
+      </button>
       <ul class="sk-nav-menu__list" role="menu">
         <li class="sk-nav-menu__item">
           <i class="sk-nav-menu__icon"></i>
@@ -53,30 +55,29 @@
       </ul>
     </nav>
 
-    <!-- MOBILE MENU -->
-      <nav class="sk-nav-mobile">
-        <button class="sk-nav-mobile__btn-bars">
-          <i class="sk-nav-mobile__bars fa fa-bars"></i>
-        </button>
-      <!-- MOBILE LOGO -->
-      <figure class="sk-header__picture-mobile">
-        <a href="" class="sk-header__link">
-            <img class="sk-header__logo" src="../../assets/images/MobileLogo.png" alt="Logo everis" />
-        </a>
-      </figure>
-      </nav>
-  
+    <!-- SEARCH -->
+    <div class="sk-search">
+      <from class="sk-search__content">
+          <input class="sk-search__data-entry" type="search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+      </form>
+    </div>
 
-    <!-- SUB MENU -->
-    <div class="sk-header__sub-menu" role="menu">
-      <input class="sk-header__send-data" type="submit" value="lupa" />
-      <i class="sk-header__notify">Notify</i>
-      <div class="sk-header__user">
-        <figure class="sk-header__user-content">
-          <img src="../../assets/images/profile.png" alt="" />
+    <!--  SUBMENU -->
+    <div class="sk-submenu" role="menu" aria-label="Menu notificaciones y perfil de usuario">
+      <button class="sk-submenu__btn" aria-label="Notificaciones">
+        <i class="sk-submenu__icon fa-solid fa-bell"></i>
+      </button>
+      <div class="sk-submenu__profile-content" aria-label="Perfil usuario">
+        <figure class="sk-submenu__content-img">
+          <a href="" class="sk-submenu__link">
+          <img src="../../assets/images/profile.png" alt="Logo perfil de usuario">
+          </a>
         </figure>
       </div>
-      <i class="sk-header__icon fa-solid fa-alicorn"></i>
+      <button class="sk-submenu__btn" aria-label="">
+        <i class="sk-submenu__icon fa-solid fa-caret-down"></i>
+      </button>
     </div>
   </header>
 

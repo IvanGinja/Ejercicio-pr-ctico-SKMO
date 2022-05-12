@@ -1,0 +1,22 @@
+////
+/// SEARCH component
+///
+/// Description of the component
+///
+/// @access public
+/// @author Dfront Specialist Team
+/// @group components of repository
+/// @name .#{$wf__ns}search
+/// @since version 1.0.0
+////
+.#{$ns}search {
+    
+    @include flex-grow(1);
+    @include order(3);
+    text-align: end;
+
+    &__data-entry {
+        display: none;
+    }
+  
+}
