@@ -87,8 +87,10 @@
 @import '05-components/repository/_components__grid.scss';
 @import '05-components/repository/_components__repository.scss';
 @import '05-components/repository/_components__sidebar.scss';
-@import '05-components/repository/header/*';
-
+@import '05-components/repository/header/_components__header.scss';
+@import '05-components/repository/header/_components__nav.scss';
+@import '05-components/repository/header/_components__search.scss';
+@import '05-components/repository/header/_components__submenu.scss';
 //*----------------------------------------------------------
 //     # TRUMPS
 // ----------------------------------------------------------*/

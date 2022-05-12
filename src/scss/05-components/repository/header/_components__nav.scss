@@ -9,8 +9,19 @@
 /// @name .#{$wf__ns}nav
 /// @since version 1.0.0
 ////
-.#{$ns}nav-mobile {
+.#{$ns}nav-menu {
     
-    display: flex;
+    @include order(1);
+    padding: rem(12);
+
+    text-align: center;
+    font-size: rem(25);
+
+    &__list {
+        display: none;
+    }
+
+    &__sk-submenu__btn {
+    }
 
 }

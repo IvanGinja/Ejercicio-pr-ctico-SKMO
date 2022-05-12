@@ -10,27 +10,24 @@
 /// @since version 1.0.0
 ////
 .#{$ns}header {
-    
-    width: 100%;
+    align-items: center;
     background: linear-gradient( 90deg, color(ns-main) 0%, color(ns-tertiary) 100% );
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: rem(5);
+    
+    width: 100%;
    
-    &__picture-desktop {
-        display: none;
-    }
+    &__picture{
 
-    &__picture-mobile {
+        @include order(2);
         width: rem(40);
-    }
 
-    &__link {}
+      
 
-    &__content {}
+        &--hidden  {
+             display: none ;
+        }
 
-    &__sub-menu {
-        display: flex;
-        width: rem(100);
     }
 }
