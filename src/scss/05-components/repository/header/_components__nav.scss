@@ -12,16 +12,21 @@
 .#{$ns}nav-menu {
     
     @include order(1);
-    padding: rem(12);
 
-    text-align: center;
     font-size: rem(25);
+    padding: rem(12);
+    text-align: center;
 
     &__list {
         display: none;
     }
 
     &__sk-submenu__btn {
+        
+    }
+
+    &__icon {
+        color: color(white);
     }
 
 }

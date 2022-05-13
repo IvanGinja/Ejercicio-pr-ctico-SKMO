@@ -1,0 +1,22 @@
+////
+/// MAIN component
+///
+/// Description of the component
+///
+/// @access public
+/// @author Ivan Ginja Martinez
+/// @group components of repository
+/// @name .#{$wf__ns}main
+/// @since version 1.0.0
+////
+
+.#{$ns}main {
+
+    @include display-flex();
+    @include flex-direction(column);
+
+    padding: rem(32) rem(15);
+
+    
+
+}
