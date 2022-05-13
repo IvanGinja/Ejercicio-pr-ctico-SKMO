@@ -14,16 +14,23 @@
     @include display-flex();
     @include order(4);
 
-    background-color: red;
+    justify-content: center;
     justify-content: end;
-    gap: rem(12);
+    gap: rem(4);
     
     &__profile-content {
-        width: rem(40);
+        width: rem(38);
     }
 
     &__btn {
         cursor: pointer;
-        font-size: rem(25);
+        font-size: rem(20);
+        color: color(white);
+
+        &--special-icon {
+            padding: rem(6) rem(11) 0 0;
+            font-size: rem(23);
+        }
+
     }
 }

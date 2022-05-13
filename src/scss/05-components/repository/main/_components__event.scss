@@ -1,0 +1,44 @@
+////
+///  EVENT component
+///
+/// Description of the component
+///
+/// @access public
+/// @author Ivan Ginja Martinez
+/// @group components of repository
+/// @name .#{$wf__ns}event-card
+/// @since version 1.0.0
+////
+
+.#{$ns}event-card {
+
+    background-color: red;
+
+    &__head {
+        background: color(ns-primary);
+        padding: rem(20) 0 rem(14) rem(25);
+    }
+
+    &__title {
+        @include display-flex();
+        gap: rem(8);
+        text-transform: uppercase;
+    }
+
+    &__icon {
+        font-size: rem(15);
+        padding: rem(1);
+    }
+
+    &__text {
+        font-size: rem(15);
+        flex: 1;
+        padding: 0 rem(5);
+    }
+
+    &__options {
+        flex: 0.3;
+        font-size: rem(18);
+        color: color(white);
+    }
+}

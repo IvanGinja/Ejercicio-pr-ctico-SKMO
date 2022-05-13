@@ -309,3 +309,12 @@
     -moz-box-sizing: $boxmodel;
     box-sizing: $boxmodel;
 }
+
+
+//Cards
+//We use this mixin to give an identical style to the cards components
+
+@mixin cards-style {
+    background-color: red;
+    border: 1px solid black;
+}
