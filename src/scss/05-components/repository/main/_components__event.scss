@@ -12,15 +12,16 @@
 
 .#{$ns}event-card {
 
-    background-color: red;
-
     &__head {
         background: color(ns-primary);
-        padding: rem(20) 0 rem(14) rem(25);
+        border-radius: rem(10) rem(10) 0 0;
+        color: color(white);
+        padding: rem(18) 0 rem(12) rem(24)
     }
 
     &__title {
         @include display-flex();
+        align-items: center;
         gap: rem(8);
         text-transform: uppercase;
     }
@@ -30,15 +31,105 @@
         padding: rem(1);
     }
 
-    &__text {
-        font-size: rem(15);
+    &__main-title {
+        color: color(white);
         flex: 1;
-        padding: 0 rem(5);
+        font-size: rem(15);
+        padding: rem(5) rem(6)
     }
 
     &__options {
-        flex: 0.3;
-        font-size: rem(18);
         color: color(white);
+        flex: 0.3;
+        font-size: rem(18)
+    }
+
+    &__options {
+
+        &--top {
+            align-self: flex-start;
+        }
+
+    }
+
+    &__content {
+    background: color(white);
+        padding: rem(26) rem(30) rem(9) rem(24);
+
+    }
+
+    &__day {
+        color: color(ns-primary);
+        font-size: rem(13);
+        text-transform: uppercase;
+    }
+
+    &__tertiary-degree {
+        color: color(ns-primary);
+        font-size: rem(16);
+        text-decoration: underline
+    }
+
+    &__event {
+        @include display-flex();
+        padding: rem(15) 0;
+        
+      
+    }
+
+    &__event {
+        
+        &--small-bottom {
+        }
+      
+    }
+
+    &__circle {
+        @include display-flex();
+        align-items: center;
+        background: color(ns-primary);
+        border-radius: rem(150);
+        height: rem(48);
+        justify-content: center;
+        width: rem(48);
+    }
+
+    &__list {
+        line-height: rem(1);
+    }
+
+    &__item {
+        padding: rem(10) 0 0 rem(12);
+    }
+
+    &__text {
+        color: color(black);
+        font-size: rem(12);
+    }
+
+    &__tertiary-degree {
+        font-size: rem(14);
+        line-height: rem(17);
+    }
+
+    &__hour {
+        color: color(white);
+        font-size: rem(12)
+    }
+
+    &__foot {
+        @include display-flex();
+        align-items: center;
+        background: color(white);
+        border-radius: 0 0 rem(5) rem(5);
+        border-top: rem(1) solid color(default-lighter);
+        justify-content: center;
+        padding: rem(13);
+
+    }
+
+    &__more-info {
+        color: color(ns-primary);
+
     }
 }

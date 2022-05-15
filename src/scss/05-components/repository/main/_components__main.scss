@@ -11,12 +11,8 @@
 ////
 
 .#{$ns}main {
-
     @include display-flex();
     @include flex-direction(column);
-
+    background: #E9FDFB;
     padding: rem(32) rem(15);
-
-    
-
 }
