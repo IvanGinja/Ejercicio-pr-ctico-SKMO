@@ -12,6 +12,113 @@
 
 .#{$ns}mail-card {
 
-    background-color: rgb(221, 255, 0);
+ 
+    &__head {
+        background: color(ns-primary);
+        border-radius: rem(10) rem(10) 0 0;
+        padding: rem(20) 0 rem(18) rem(24);
+        margin-top: rem(15);
+    }
 
+    &__title {
+        @include display-flex();
+        align-items: center;
+        gap: rem(8);
+        font-size: rem(15);
+    }
+
+    &__icon {
+        font-size: rem(15);
+        padding: rem(1);
+        color: color(white);
+    }
+
+    &__icon {
+        &--small {
+            font-size: 10px;
+            color: color(warning);
+        }
+    }
+
+    &__main-title {
+        color: color(white);
+        flex: .9;
+        font-size: rem(15);
+        text-transform: uppercase;
+        padding-left: rem(6);
+    }
+
+    &__options {
+        padding-right: rem(3);
+    }
+
+    &__content {
+        background: white;
+        font-size: rem(15);
+        padding: rem(18) 0 0 rem(25);
+        
+    }
+
+    &__update {
+        padding-bottom: rem(30);   
+    }
+
+    &__text {
+        font-size: rem(14);
+        padding-bottom: rem(6);
+    }
+
+    &__text {
+        &--small {
+            font-size: rem(12);
+        }
+    }
+
+    &__alert {
+        @include display-flex();
+        align-items: center;
+    }
+
+    &__circle {
+        width: rem(12);
+        height: rem(12);
+        margin-top: rem(2);
+        background: color(warning-light);
+        background-color: black;
+        border-radius: rem(150);
+    }
+
+    &__check {
+        @include display-flex();
+        align-items: center;
+        padding-bottom: rem(3);
+    }
+
+    &__label-title {
+        flex-basis: 70%;
+      
+    }
+
+    &__data-entry {
+        flex: 1;
+        align-self: baseline;
+        height: rem(18);
+        margin-left: rem(13);
+      
+    }
+
+    &__foot {
+        @include display-flex();
+        align-items: center;
+        background: color(white);
+        border-radius: 0 0 rem(5) rem(5);
+        border-top: rem(1) solid color(default-lighter);
+        justify-content: center;
+        padding: rem(13);
+    }
+
+    &__more-info {
+        color: color(ns-primary);
+
+    }
 }
