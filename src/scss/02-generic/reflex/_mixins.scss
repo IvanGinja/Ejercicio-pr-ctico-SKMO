@@ -53,8 +53,8 @@
 @mixin reset-whitespace() {
     @if $legacy-support == true {
         letter-spacing: normal;
-        word-spacing: normal;
         white-space: normal;
+        word-spacing: normal;
     }
 }
 
@@ -166,9 +166,9 @@
 }
 
 @mixin flex-grow($grow:1) {
-    -ms-flex-positive: $grow;
     -webkit-flex-grow: $grow;
     flex-grow: $grow;
+    -ms-flex-positive: $grow;
 }
 
 @mixin flex-shrink($shrink:1) {
@@ -178,16 +178,16 @@
 }
 
 @mixin flex-basis($basis:auto) {
-    -ms-flex-preferred-size: $basis;
     -webkit-flex-basis: $basis;
     flex-basis: $basis;
+    -ms-flex-preferred-size: $basis;
 }
 
 @mixin flex-flow($direction: row, $wrap: nowrap) {
-    -ms-flex-wrap: $wrap;
     -ms-flex-direction: $direction;
     -webkit-flex-flow: $direction $wrap;
     flex-flow: $direction $wrap;
+    -ms-flex-wrap: $wrap;
 }
 
 @mixin flex-wrap($wrap: wrap) {
@@ -308,4 +308,61 @@
     -webkit-box-sizing: $boxmodel;
     -moz-box-sizing: $boxmodel;
     box-sizing: $boxmodel;
+}
+
+//
+// Card header style
+//
+// A style is applied that is shared between all cards
+// We have to padding each card like so: head-card(10, 2, 4, 20)
+// ---
+
+@mixin head-card($top:0, $right:0, $bottom:0, $left:0) {
+       
+        &__head {
+            background: color(ns-primary);
+            border-radius: rem(10) rem(10) 0 0;
+            color: color(white);
+            padding-top: rem($top);  
+            padding-right: rem($right);
+            padding-bottom: rem($bottom);
+            padding-left: rem($left);   
+        }
+
+        &__title {
+            @include display-flex();
+            align-items: center;
+            font-size: rem(15);
+            gap: rem(8);
+        }
+    
+        &__icon {
+            color: color(white);
+            font-size: rem(15);
+            padding: rem(1);
+        }
+    
+        &__main-title {
+            color: color(white);
+            flex: .9;
+            font-size: rem(15);
+            padding-left: rem(6);
+            text-transform: uppercase;
+        }
+}
+
+//
+// Card footer style
+//
+// We only add to the footer to give it the stylo
+// ---
+
+@mixin footer-card {
+    @include display-flex();
+    align-items: center;
+    background: color(white);
+    border-radius: 0 0 rem(5) rem(5);
+    border-top: rem(1) solid color(default-lighter);
+    justify-content: center;
+    padding: rem(13);
 }

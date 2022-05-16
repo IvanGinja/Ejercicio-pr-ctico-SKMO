@@ -141,56 +141,148 @@
           <i class="fa-solid fa-caret-down"></i>
         </button>
     </section>
-    <section class="sk-mail-card" aria-label="Mails">
+    <section class="sk-notification-card" aria-label="Notificaciones">
+      <header class="sk-notification-card__head">
+        <div class="sk-notification-card__title">
+          <i class="sk-notification-card__icon fa-solid fa-bell"></i>
+          <h2 class="sk-notification-card__main-title">Notificaciones</h2>
+          <button class="sk-notification-card__options">
+            <i class="sk-notification-card__icon fa-solid fa-ellipsis-v"></i>
+          </button>
+        </div>
+      </header>
+      <div class="sk-notification-card__content">
+        <div class="sk-notification-card__update">
+          <form class="sk-notification-card__check" method="">
+            <label class="sk-notification-card__label-title" for="update-benchmark">Actualizar benchmark perfiles en proyecto</label>
+            <input class="sk-notification-card__data-entry" type="checkbox" id="update-benchmark" name="update-benchmark" value="">
+          </form>
+          <p class="sk-notification-card__text">SKM: intranet inteligente</p>
+          <div class="sk-notification-card__alert">
+            <i class="sk-notification-card__icon sk-notification-card__icon--small fa-solid fa-circle-exclamation"></i>
+            <p class="sk-notification-card__text sk-notification-card__text--small">Deadline 19/06</p>
+          </div>
+        </div>
+        <div class="sk-notification-card__update">
+          <form class="sk-notification-card__check" method="">
+            <label class="sk-notification-card__label-title" for="update-document1">Actualizar documentos</label>
+            <input class="sk-notification-card__data-entry" type="checkbox" id="update-document-1" name="update-document-1" value="">
+          </form>
+          <p class="sk-notification-card__text">SKM: intranet inteligente</p>
+          <div class="sk-notification-card__alert">
+            <i class="sk-notification-card__icon sk-notification-card__icon--small fa-solid fa-circle-exclamation"></i>
+            <p class="sk-notification-card__text sk-notification-card__text--small">Deadline 19/06</p>
+          </div>
+        </div>
+        <div class="sk-notification-card__update sk-notification-card__update--remove-border">
+          <form class="sk-notification-card__check" method="">
+            <label class="sk-notification-card__label-title" for="update-document-2">Actualizar documentos</label>
+            <input class="sk-notification-card__data-entry" type="checkbox" id="update-document-2" name="update-document-2" value="">
+          </form>
+          <p class="sk-notification-card__text">SKM: intranet inteligente</p>
+          <div class="sk-notification-card__alert">
+            <i class="sk-notification-card__icon sk-notification-card__icon--small fa-solid fa-circle-exclamation"></i>
+            <p class="sk-notification-card__text sk-notification-card__text--small">Deadline 19/06</p>
+          </div>
+        </div>
+      </div>
+      <footer class="sk-notification-card__foot">
+        <button class="sk-notification-card__more-info" type="button">
+          Ver más
+          <i class="fa-solid fa-caret-down"></i>
+        </button>
+      </footer>
+    </section>
+    <section class="sk-mail-card" aria-label="Emails">
       <header class="sk-mail-card__head">
         <div class="sk-mail-card__title">
-          <i class="sk-mail-card__icon fa-solid fa-bell"></i>
-          <p class="sk-mail-card__main-title">Notificaciones</p>
+          <i class="sk-mail-card__icon fa-solid fa-envelope"></i>
+          <h2 class="sk-mail-card__main-title">Mails</h2>
           <button class="sk-mail-card__options">
             <i class="sk-mail-card__icon fa-solid fa-ellipsis-v"></i>
           </button>
         </div>
       </header>
       <div class="sk-mail-card__content">
-        <div class="sk-mail-card__update">
-          <form class="sk-mail-card__check" method="">
-            <label class="sk-mail-card__label-title" for="update-benchmark">Actualizar benchmark perfiles en proyecto</label>
-            <input class="sk-mail-card__data-entry" type="checkbox" id="update-benchmark" name="update-benchmark" value="">
-          </form>
-          <p class="sk-mail-card__text">SKM: intranet inteligente</p>
-          <div class="sk-mail-card__alert">
-            <i class="sk-mail-card__icon sk-mail-card__icon--small fa-solid fa-circle-exclamation"></i>
-            <p class="sk-mail-card__text sk-mail-card__text--small">Deadline 19/06</p>
+        <div class="sk-mail-card__message">
+          <p class="sk-mail-card__info">20/06/2017 - 13:00</p>
+          <div class="sk-mail-card__profile">
+            <figure class="sk-mail-card__picture">
+              <a class="sk-mail-card__link" href="http://">
+                <img src="../../assets/images/profile.png" alt="Imagen remitente">
+              </a>
+            </figure>
+            <p class="sk-mail-card__text">Fracisco Javier Fernández</p>
           </div>
+          <h3 class="sk-mail-card__tertiary-degree">Nuevos datos password<br>(Invision....)</h3>
+          <p>Hola equipo, aquí tenéis las actualizaciones de [ANCHO MÁX 247PX]...</p>
         </div>
-        <div class="sk-mail-card__update">
-          <form class="sk-mail-card__check" method="">
-            <label class="sk-mail-card__label-title" for="update-document1">Actualizar documentos</label>
-            <input class="sk-mail-card__data-entry" type="checkbox" id="update-document-1" name="update-document-1" value="">
-          </form>
-          <p class="sk-mail-card__text">SKM: intranet inteligente</p>
-          <div class="sk-mail-card__alert">
-            <i class="sk-mail-card__icon sk-mail-card__icon--small fa-solid fa-circle-exclamation"></i>
-            <p class="sk-mail-card__text sk-mail-card__text--small">Deadline 19/06</p>
+        <div class="sk-mail-card__message">
+          <p class="sk-mail-card__info">20/06/2017 - 13:00</p>
+          <div class="sk-mail-card__profile">
+            <figure class="sk-mail-card__picture">
+              <a class="sk-mail-card__link" href="http://">
+                <img src="../../assets/images/profile.png" alt="Imagen remitente">
+              </a>
+            </figure>
+            <p class="sk-mail-card__text">Fracisco Javier Fernández</p>
           </div>
+          <h3 class="sk-mail-card__tertiary-degree">Nuevos datos password<br>(Invision....)</h3>
+          <p>Hola equipo, aquí tenéis las actualizaciones de [ANCHO MÁX 247PX]...</p>
         </div>
-        <div class="sk-mail-card__update">
-          <form class="sk-mail-card__check" method="">
-            <label class="sk-mail-card__label-title" for="update-document-2">Actualizar documentos</label>
-            <input class="sk-mail-card__data-entry" type="checkbox" id="update-document-2" name="update-document-2" value="">
-          </form>
-          <p class="sk-mail-card__text">SKM: intranet inteligente</p>
-          <div class="sk-mail-card__alert">
-            <i class="sk-mail-card__icon sk-mail-card__icon--small fa-solid fa-circle-exclamation"></i>
-            <p class="sk-mail-card__text sk-mail-card__text--small">Deadline 19/06</p>
+        <div class="sk-mail-card__message sk-mail-card__message--small-padding ">
+          <p class="sk-mail-card__info">20/06/2017 - 13:00</p>
+          <div class="sk-mail-card__profile">
+            <figure class="sk-mail-card__picture">
+              <a class="sk-mail-card__link" href="http://">
+                <img src="../../assets/images/profile.png" alt="Imagen remitente">
+              </a>
+            </figure>
+            <p class="sk-mail-card__text">Fracisco Javier Fernández</p>
           </div>
+          <h3 class="sk-mail-card__tertiary-degree">Nuevos datos password<br>(Invision....)</h3>
+          <p>Hola equipo, aquí tenéis las actualizaciones de [ANCHO MÁX 247PX]...</p>
         </div>
       </div>
       <footer class="sk-mail-card__foot">
-        <button class="sk-mail-card__more-info" type="button">
+        <button class="sk-notification-card__more-info" type="button">
           Ver más
           <i class="fa-solid fa-caret-down"></i>
         </button>
+      </footer>
+    </section>
+    <section class="sk-projects-card" aria-label="Proyectos">
+      <header class="sk-projects-card__head">
+        <div class="sk-projects-card__title">
+          <i class="sk-projects-card__icon fa-solid fa-folder-open"></i>
+          <h2 class="sk-projects-card__main-title">Proyectos</h2>
+          <button class="sk-projects-card__options">
+            <i class="sk-projects-card__icon fa-solid fa-ellipsis-v"></i>
+          </button>
+        </div>
+      </header>
+      <nav class="sk-projects-card__menu">
+        <ul class="sk-projects-card__list">
+          <li class="sk-projects-card__item"><a class="sk-projects-card__link" href="#">En curso</a></li>
+          <li class="sk-projects-card__item"><a class="sk-projects-card__link" href="#">Cerrados</a></li>
+          <li class="sk-projects-card__item"><a class="sk-projects-card__link" href="#">Relacionados</a></li>
+        </ul>
+      </nav>
+      <div class="sk-projects-card__content">
+        <div class="sk-projects-card__course">
+          <h3 class="sk-projects-card__tertiary-degree">SKM:intranet intelifente</h3>
+          <p class="sk-projects-card__text">Proyecto interno</p>
+          <ul class="sk-projects-card__list sk-projects-card__list--special">
+            <li class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--small">Intranet</li>
+            <li class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--small">Buscador inteligente</li>
+            <li class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--small">+2</li>
+          </ul>
+        </div>
+      </div>
+      <footer class="sk-projects-card__foot">
+        <button class="sk-projects-card__more-info" type="button">
+          Ver más
+          <i class="fa-solid fa-caret-down"></i>
       </footer>
     </section>
     <section class="sk-contacts-card" aria-label="Mis contactos">
@@ -205,32 +297,6 @@
       </header>
       <div class="sk-contacts-card__content"></div>
       <footer class="sk-contacts-card__foot"></footer>
-    </section>
-    <section class="sk-notifications-card" aria-label="Notificaciones">
-      <header class="sk-notifications-card__head">
-        <div class="sk-notifications-card__title">
-          <i class="sk-notifications-card__icon"></i>
-          <p class="sk-notifications-card__text"></p>
-        </div>
-        <button class="sk-notifications-card__options">
-          <i class="sk-notifications-card__icon"></i>
-        </button>
-      </header>
-      <div class="sk-notifications-card__content"></div>
-      <footer class="sk-notifications-card__foot"></footer>
-    </section>
-    <section class="sk-projects-card" aria-label="Proyectos">
-      <header class="sk-projects-card__head">
-        <div class="sk-projects-card__title">
-          <i class="sk-projects-card__icon"></i>
-          <p class="sk-projects-card__text"></p>
-        </div>
-        <button class="sk-projects-card__options">
-          <i class="sk-projects-card__icon"></i>
-        </button>
-      </header>
-      <div class="sk-projects-card__content"></div>
-      <footer class="sk-projects-card__foot"></footer>
     </section>
   </main>
 </body>

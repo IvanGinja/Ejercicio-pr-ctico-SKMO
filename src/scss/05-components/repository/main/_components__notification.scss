@@ -6,13 +6,99 @@
 /// @access public
 /// @author Ivan Ginja Martinez
 /// @group components of repository
-/// @name .#{$wf__ns}notifications-card
+/// @name .#{$wf__ns}notification-card
 /// @since version 1.0.0
 ////
 
-.#{$ns}notifications-card {
+.#{$ns}notification-card {
 
-    background-color: rgb(0, 255, 13);
-    min-width: rem(287);
+    margin-top: rem(16);
 
+    @include head_card(20, 0, 18, 24);
+
+    &__icon {
+        &--small {
+            color: color(warning);
+            font-size: 10px;
+        }
+    }
+
+
+    &__options {
+        padding-right: rem(3);
+    }
+
+    &__content {
+        background: white;
+        font-size: rem(15);
+        padding: 0 rem(24);
+    }
+
+    &__update {
+        padding-bottom: rem(13);
+        border-bottom: 1px solid color(default-lighter);
+        line-height: rem(22);
+    }
+
+    &__update {
+       &--remove-border {
+           border-bottom: none;
+       }
+    }
+
+    &__text {
+        font-size: rem(14);
+        color: color(black);
+    }
+
+    &__text {
+        &--small {
+            font-size: rem(12);
+        }
+    }
+
+    &__alert {
+        @include display-flex();
+        align-items: center;
+        padding-bottom: rem(10px);
+    }
+
+    &__circle {
+        background: color(warning-light);
+        background-color: black;
+        border-radius: rem(150);
+        height: rem(12);
+        margin-top: rem(2);
+        width: rem(12);
+    }
+
+    &__check {
+        @include display-flex();
+        align-items: center;
+        padding-top: rem(13);
+    }
+
+    &__label-title {
+        flex-basis: 70%;
+        color: color(black);
+        font-weight: bold;
+      
+    }
+
+    &__data-entry {
+        align-self: baseline;
+        flex: 1;
+        height: rem(18);
+        margin-left: rem(54);
+      
+    }
+
+    &__foot {
+        @include footer-card;
+    }
+
+    &__more-info {
+        color: color(ns-primary);
+
+    }
 }

@@ -12,109 +12,73 @@
 
 .#{$ns}mail-card {
 
- 
-    &__head {
-        background: color(ns-primary);
-        border-radius: rem(10) rem(10) 0 0;
-        padding: rem(20) 0 rem(18) rem(24);
-        margin-top: rem(15);
-    }
+    margin-top: rem(18);
 
-    &__title {
-        @include display-flex();
-        align-items: center;
-        gap: rem(8);
-        font-size: rem(15);
-    }
-
-    &__icon {
-        font-size: rem(15);
-        padding: rem(1);
+    @include head_card(20, 0, 15, 24);
+    
+    &__options {
         color: color(white);
-    }
-
-    &__icon {
-        &--small {
-            font-size: 10px;
-            color: color(warning);
-        }
-    }
-
-    &__main-title {
-        color: color(white);
-        flex: .9;
-        font-size: rem(15);
-        text-transform: uppercase;
-        padding-left: rem(6);
+        flex: 0.3;
+        font-size: rem(18)
     }
 
     &__options {
-        padding-right: rem(3);
+
+        &--top {
+            align-self: flex-start;
+        }
+
     }
 
     &__content {
-        background: white;
-        font-size: rem(15);
-        padding: rem(18) 0 0 rem(25);
-        
+        background: color(white);
+        padding: rem(17) rem(30) 0 rem(24);
+
     }
 
-    &__update {
-        padding-bottom: rem(30);   
+    &__message {
+        border-bottom: 1px solid color(default-lighter);
+        padding-bottom: rem(6)
     }
 
-    &__text {
-        font-size: rem(14);
-        padding-bottom: rem(6);
-    }
-
-    &__text {
-        &--small {
-            font-size: rem(12);
+    &__message {
+        &--small-padding {
+            padding-bottom: rem(1);
         }
     }
 
-    &__alert {
+    &__info {
+        padding-bottom: rem(8)
+    }
+
+    &__profile {
         @include display-flex();
         align-items: center;
+        gap: rem(10);
     }
 
-    &__circle {
-        width: rem(12);
-        height: rem(12);
-        margin-top: rem(2);
-        background: color(warning-light);
-        background-color: black;
-        border-radius: rem(150);
+    &__picture {
+        width: rem(20);
     }
 
-    &__check {
+    &__tertiary-degree {
+        color: color(ns-primary);
+        font-size: rem(15);
+        padding: rem(5) 0 0 rem(3);
+        text-decoration: underline;
+    }
+
+    &__event {
         @include display-flex();
-        align-items: center;
-        padding-bottom: rem(3);
+        padding: rem(15) 0;
     }
 
-    &__label-title {
-        flex-basis: 70%;
-      
-    }
-
-    &__data-entry {
-        flex: 1;
-        align-self: baseline;
-        height: rem(18);
-        margin-left: rem(13);
-      
+    &__text {
+        font-size: rem(12);
     }
 
     &__foot {
-        @include display-flex();
-        align-items: center;
-        background: color(white);
-        border-radius: 0 0 rem(5) rem(5);
-        border-top: rem(1) solid color(default-lighter);
-        justify-content: center;
-        padding: rem(13);
+        @include footer-card;
     }
 
     &__more-info {
