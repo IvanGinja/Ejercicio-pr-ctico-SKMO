@@ -12,31 +12,7 @@
 
 .#{$ns}event-card {
 
-    &__head {
-        background: color(ns-primary);
-        border-radius: rem(10) rem(10) 0 0;
-        color: color(white);
-        padding: rem(18) 0 rem(12) rem(24)
-    }
-
-    &__title {
-        @include display-flex();
-        align-items: center;
-        gap: rem(8);
-        text-transform: uppercase;
-    }
-
-    &__icon {
-        font-size: rem(15);
-        padding: rem(1);
-    }
-
-    &__main-title {
-        color: color(white);
-        flex: 1;
-        font-size: rem(15);
-        padding: rem(5) rem(6)
-    }
+    @include head_card(20, 0, 14, 24);
 
     &__options {
         color: color(white);
@@ -77,13 +53,6 @@
       
     }
 
-    &__event {
-        
-        &--small-bottom {
-        }
-      
-    }
-
     &__circle {
         @include display-flex();
         align-items: center;
@@ -118,6 +87,7 @@
     }
 
     &__foot {
+<<<<<<< HEAD
         @include display-flex();
         align-items: center;
         background: color(white);
@@ -125,6 +95,9 @@
         border-top: rem(1) solid color(default-lighter);
         justify-content: center;
         padding: rem(13);
+=======
+        @include footer-card;
+>>>>>>> develop
     }
 
     &__more-info {
