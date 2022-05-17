@@ -10,7 +10,84 @@
 /// @since version 1.0.0
 ////
 
-.#{$ns}contacts-card {
+.#{$ns}contact-card {
 
-    background-color: rgb(0, 8, 255);
+    margin-top: rem(17);
+
+    @include head_card(20, 0, 7, 24);
+    
+    @include menu-card;
+
+    @include media-query(sm) {
+        margin: rem(222) 0;
+        order: 5;
+        height: rem(406);
+    }
+
+    @include media-query(lg) {
+        width: 31%;
+        height: auto;
+    }
+
+    &__content {
+        background: color(white);
+        border-radius: 0 0 rem(7) rem(8);
+        height: rem(405);
+        overflow-y: scroll;
+        padding: rem(0) rem(11) 0 rem(25);
+    }
+
+    &__contact-info {
+        @include display-flex();
+        align-items: center;
+        border-bottom: 1px solid #d8d8d8;
+        padding-top: rem(8);
+    }
+
+    &__profile-content {
+        padding-bottom: rem(9);
+        width: rem(40);
+    }
+
+
+    &__profile {
+        flex: .96;
+        padding-left: rem(8);
+    }
+
+    &__profile {
+
+        &--space {
+            line-height: rem(26);
+        }
+
+    }
+
+    &__name {
+        color: color(ns-primary);
+        font-size: rem(14);
+        font-weight: bold;
+        padding: rem(12) 0 rem(25) 0;
+        text-decoration: underline;
+    }
+
+    &__name {
+       
+        &--small-padding {
+            padding-bottom: 0;
+        }
+    
+    }
+
+    &__icon {
+        align-self: flex-start;
+    }
+
+    &__icon {
+        &--black {
+            color: color(black);
+            padding-top: rem(11);
+        }
+    }
 }
+

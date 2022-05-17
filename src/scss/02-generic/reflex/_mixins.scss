@@ -323,10 +323,10 @@
             background: color(ns-primary);
             border-radius: rem(10) rem(10) 0 0;
             color: color(white);
-            padding-top: rem($top);  
-            padding-right: rem($right);
             padding-bottom: rem($bottom);
-            padding-left: rem($left);   
+            padding-left: rem($left);  
+            padding-right: rem($right);
+            padding-top: rem($top);   
         }
 
         &__title {
@@ -340,6 +340,21 @@
             color: color(white);
             font-size: rem(15);
             padding: rem(1);
+        }
+
+        &__options {
+            color: color(white);
+            flex: 0.3;
+            font-size: rem(18);
+            padding-right: rem(3);
+        }
+
+        &__options {
+
+            &--top {
+                align-self: flex-start;
+            }
+    
         }
     
         &__main-title {
@@ -365,4 +380,91 @@
     border-top: rem(1) solid color(default-lighter);
     justify-content: center;
     padding: rem(13);
+}
+
+@mixin menu-card {
+
+    &__menu {
+        @include display-flex();
+        background: color(default);
+        font-size: rem(14);
+        padding: rem(12) 0;
+        width: 100%;
+    }
+
+    &__list {
+        @include display-flex();
+        width: 100%;
+       
+    }
+
+    &__list {
+       
+        &--special {
+            @include display-flex();
+            align-items: center;
+            color: color(black);
+            font-size: rem(12);
+            gap: rem(9);
+        }
+       
+    }
+
+    &__item {
+        flex: 1;
+    }
+
+    &__item {
+        
+        &--circle {
+            background: color(bubble);
+            border-radius: rem(50);
+        }
+
+    }
+
+    &__item {
+        
+        &--mod {
+            @include display-flex();
+            align-items: center;
+            flex: none;
+            font-weight: bold;
+            height: rem(24);
+            justify-content: center;
+            width: rem(62);
+        }
+
+    }
+
+    &__item {
+        
+        &--big {
+            width: rem(129);
+        }
+
+    }
+
+    &__item {
+        
+        &--different {
+            background: color(white);
+            border: rem(2) solid color(bubble);
+            width: rem(35);
+        }
+
+    }
+
+    &__link {
+        
+        color: color(ns-primary);
+        padding: rem(10) rem(13) rem(10) rem(18);
+        
+        &:hover {    
+            border-bottom: rem(2) solid color(ns-primary);
+            font-weight: bold;
+            text-decoration: none;       
+        }
+    }
+    
 }

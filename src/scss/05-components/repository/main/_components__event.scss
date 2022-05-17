@@ -14,18 +14,14 @@
 
     @include head_card(20, 0, 14, 24);
 
-    &__options {
-        color: color(white);
-        flex: 0.3;
-        font-size: rem(18)
+    @include media-query(sm) {
+        margin: 0;
+        order: 1;
+        width: 48%;
     }
 
-    &__options {
-
-        &--top {
-            align-self: flex-start;
-        }
-
+    @include media-query(lg) {
+        width: 31%;
     }
 
     &__content {
@@ -95,3 +91,4 @@
 
     }
 }
+

@@ -12,24 +12,25 @@
 
 .#{$ns}mail-card {
 
-    margin-top: rem(18);
 
     @include head_card(20, 0, 15, 24);
     
-    &__options {
-        color: color(white);
-        flex: 0.3;
-        font-size: rem(18)
+    @include media-query(sm) {
+        margin: 0;
+        order: 2;
+        height: rem(405);
+        width: 49%;
+        padding-left: rem(6);
+    }
+    
+    @include media-query(lg) {
+        width: 31%;
+        height: auto;
     }
 
-    &__options {
+    margin-top: rem(17);
 
-        &--top {
-            align-self: flex-start;
-        }
-
-    }
-
+    
     &__content {
         background: color(white);
         padding: rem(17) rem(30) 0 rem(24);
@@ -86,3 +87,5 @@
 
     }
 }
+
+
