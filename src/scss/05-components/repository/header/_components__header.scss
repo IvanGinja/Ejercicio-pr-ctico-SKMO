@@ -18,8 +18,23 @@
     padding: rem(5) rem(15) 0 rem(5);
     width: 100%;
 
-    @include media-query(sm, min) {
+    @include media-query(sm) {
         padding: rem(11) rem(15) rem(10) rem(4);
+
+        &__picture {
+            display: none;
+        }
+
+        &__picture--hidden {
+            display: block;
+            width: rem(128);
+            padding-left: rem(12);
+        }
+
+    }
+
+    @include media-query(xl) {
+        padding-bottom: 0
     }
    
     &__picture{

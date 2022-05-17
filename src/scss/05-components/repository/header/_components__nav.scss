@@ -13,6 +13,18 @@
     
     @include order(1);
 
+    @include media-query(sm) {
+        display: block;
+
+        &__mobile-menu {
+            display: none;
+        }
+
+        &__list {
+            display: block;
+        }
+    }
+
     font-size: rem(25);
     padding: rem(12);
     text-align: center;

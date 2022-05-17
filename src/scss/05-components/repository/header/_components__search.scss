@@ -14,9 +14,37 @@
     @include flex-grow(1);
     @include order(3);
     
+    @include media-query(sm) {
+
+        &__content {
+            display: flex;
+            position: relative;
+            justify-content: start;
+            padding-left: rem(18);
+        }
+
+        &__data-entry {
+            display: block;
+            padding: rem(9);
+            width: rem(273);
+            border-radius: rem(6);
+        }
+
+        &__icon {
+            position: absolute;
+            left: rem(260);
+            top: rem(13);
+            font-size: rem(17);
+            color: gray;
+        }
+
+    }
+
+    @include media-query(lg) {
+    }
+
     color: color(white);
     font-size: rem(20);
-    
     text-align: end;
 
     &__content {

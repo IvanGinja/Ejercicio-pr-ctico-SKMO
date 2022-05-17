@@ -16,16 +16,33 @@
     @include head_card(20, 0, 15, 24);
     
     @include media-query(sm) {
+        height: rem(405);
         margin: 0;
         order: 2;
-        height: rem(405);
-        width: 49%;
         padding-left: rem(6);
+        width: 49%;
     }
     
     @include media-query(lg) {
-        width: 31%;
-        height: auto;
+        height: rem(408);
+        order: 2;
+        width: 31.2%;
+
+        &__message {
+          padding: rem(2) 0;
+        }
+    }
+
+    @include media-query(xl) {
+        width: 45.2%;
+
+        &__content {
+            padding-bottom: rem(22);
+        }
+
+        &__message {
+            padding:  rem(6) 0;
+        }
     }
 
     margin-top: rem(17);
@@ -34,12 +51,12 @@
     &__content {
         background: color(white);
         padding: rem(17) rem(30) 0 rem(24);
-
     }
 
     &__message {
         border-bottom: 1px solid color(default-lighter);
         padding-bottom: rem(6)
+
     }
 
     &__message {

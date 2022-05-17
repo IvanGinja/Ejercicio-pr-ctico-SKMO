@@ -21,8 +21,14 @@
     }
 
     @include media-query(lg) {
-        width: 31%;
         height: auto;
+        margin: 0;
+        order: 4;
+        width: 31%;
+    }
+
+    @include media-query(xl) {
+        width: 23.5%;
     }
 
     margin-top: rem(14);
