@@ -12,83 +12,48 @@
 
 .#{$ns}projects-card {
 
-    margin-top: rem(12);
 
-    @include head_card(20, 0, 16, 24);
+    @include head_card(20, 0, 15, 24);
+    @include menu-card;
 
-    &__menu {
-        @include display-flex();
-        width: 100%;
-        background: color(default);
-        font-size: rem(14);
-        padding: rem(12) 0;
+    @include media-query(sm) {
+        margin-top: rem(135);
+        order: 4;
+        padding-left: rem(8);
+        width: 49%;
+        height: rem(5);
     }
+
+    @include media-query(lg) {
+        width: 31%;
+        height: auto;
+    }
+
+    margin-top: rem(11);
 
     &__content {
         background: color(white);
-        padding: rem(22) rem(21) 0;
+        padding: rem(0) rem(21) 0 rem(25);
       
     }
 
     &__course {
+        padding: rem(22) 0;
         padding-left: rem(5);
     }
 
     &__tertiary-degree {
+        color: color(ns-primary);
         font-size: rem(16);
         padding-bottom: rem(8);
     }
 
     &__text {
-        padding-bottom: rem(12);
+        color: color(default-dark);
+        padding-bottom: rem(9);
     }
 
-    &__list {
-        @include display-flex();
-        width: 100%;
-       
-    }
-
-    &__list {
-       
-        &--special {
-            font-size: rem(15);
-        }
-       
-    }
-
-    &__item {
-        flex: 1;
-    }
-
-    &__item {
-        
-        &--circle {
-            border-radius: rem(50);
-            background: color(bubble);
-        }
-
-    }
-
-    &__item {
-        
-        &--small {
-            flex: none;
-        }
-
-    }
-
-    &__link {
-        
-        color: color(ns-primary);
-        padding: rem(10) rem(13) rem(10) rem(18);
-        
-        &:hover {
-            text-decoration: none;
-            font-weight: bold;    
-            border-bottom: rem(2) solid color(ns-primary);       
-        }
-    }
+   
 
     &__foot {
         @include footer-card;
@@ -98,3 +63,4 @@
         color: color(ns-primary);
     }
 }
+
