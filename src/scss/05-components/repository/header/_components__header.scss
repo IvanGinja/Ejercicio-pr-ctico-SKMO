@@ -11,14 +11,16 @@
 ////
 .#{$ns}header {
 
+    @include display-flex();
+
     align-items: center;
     background: linear-gradient( 90deg, color(ns-main) 0%, color(ns-tertiary) 100% );
-    display: flex;
     justify-content: space-between;
     padding: rem(5) rem(15) 0 rem(5);
     width: 100%;
 
     @include media-query(sm) {
+
         padding: rem(11) rem(15) rem(10) rem(4);
 
         &__picture {
@@ -26,15 +28,26 @@
         }
 
         &__picture--hidden {
+            @include order(2);
             display: block;
-            width: rem(128);
             padding-left: rem(12);
+            width: rem(128);
         }
 
     }
 
+    @include media-query(lg) {
+        &__picture--hidden {
+            @include order(1);
+        }
+    }
+
     @include media-query(xl) {
         padding-bottom: 0
+    }
+
+    &__menu-content {
+        @include display-flex();
     }
    
     &__picture{
@@ -44,7 +57,7 @@
         width: rem(44);
 
         &--hidden  {
-             display: none ;
+            display: none ;
         }
 
     }

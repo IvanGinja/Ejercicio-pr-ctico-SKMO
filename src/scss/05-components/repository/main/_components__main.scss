@@ -29,14 +29,12 @@
     }
 
     @include media-query(xl) {
-        padding: 45px 22px 0px;
         gap: 17px;
+        padding: 45px 22px 0px;
     }
 
-     
-    background: #E9FDFB;
+    background-image: url(../../../../assets/images/MicrosoftTeams-image.png), linear-gradient(0deg, hsl(180, 30%, 83%), hsl(220, 15%, 96%));
+    background-repeat: no-repeat;
+    background-size: contain;
     padding: rem(32) rem(15);
 }
-
-
-
