@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <script src="https://kit.fontawesome.com/39ae60f305.js" crossorigin="anonymous"></script>
@@ -28,40 +27,42 @@
       </a>
     </figure>
 
-
-
     <!-- MENU -->
-    <nav class="sk-nav-menu" aria-flowto="i1">
+    <nav class="sk-nav-menu">
       <button class="sk-nav-menu__mobile-menu" role="menu" aria-label="Despegable">
         <i class="sk-nav-menu__icon fa-solid fa-bars"></i>
       </button>
       <ul class="sk-nav-menu__list" role="menu">
         <li class="sk-nav-menu__item">
-          <i class="sk-nav-menu__icon"></i>
+          <i class="sk-nav-menu__icon fa-solid fa-house"></i>
           <a href="" class="sk-nav-menu__link">Inicio</a>
         </li>
-        <li class="sk-nav-menu__item">
-          <i class="sk-nav-menu__icon"></i>
+        <li class="sk-nav-menu__item sk-nav-menu__item">
+          <i class="sk-nav-menu__icon fa-solid fa-table-cells"></i>
           <a href="" class="sk-nav-menu__link">Aplicaciones</a>
         </li>
-        <li class="sk-nav-menu__item">
-          <i class="sk-nav-menu__icon"></i>
+        <li class="sk-nav-menu__item sk-nav-menu__item">
+          <i class="sk-nav-menu__icon fa-solid fa-globe"></i>
           <a href="" class="sk-nav-menu__link">Comunidades</a>
         </li>
-        <li class="sk-nav-menu__item">
-          <i class="sk-nav-menu__icon"></i>
+        <li class="sk-nav-menu__item sk-nav-menu__item">
+          <i class="sk-nav-menu__icon fa-brands fa-connectdevelop"></i>
           <a href="" class="sk-nav-menu__link">everPedia</a>
         </li>
       </ul>
     </nav>
 
+
+
     <!-- SEARCH -->
-    <div class="sk-search">
-      <from class="sk-search__content">
-        <input class="sk-search__data-entry" type="search">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        </form>
-    </div>
+    <form class="sk-search">
+      <fieldset class="sk-search__content">
+        <input class="sk-search__data-entry" type="search" placeholder="proyecto skm">
+      </fieldset>
+      <button class="sk-search__btn-magnifying">
+        <i class="sk-search__icon fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
 
     <!--  SUBMENU -->
     <div class="sk-submenu" role="menu" aria-label="Menu notificaciones y perfil de usuario">
@@ -154,8 +155,10 @@
       <div class="sk-notification-card__content">
         <div class="sk-notification-card__update">
           <form class="sk-notification-card__check" method="">
-            <label class="sk-notification-card__label-title" for="update-benchmark">Actualizar benchmark perfiles en proyecto</label>
-            <input class="sk-notification-card__data-entry" type="checkbox" id="update-benchmark" name="update-benchmark" value="">
+            <label class="sk-notification-card__label-title" for="update-benchmark">Actualizar benchmark perfiles en
+              proyecto</label>
+            <input class="sk-notification-card__data-entry" type="checkbox" id="update-benchmark"
+              name="update-benchmark" value="">
           </form>
           <p class="sk-notification-card__text">SKM: intranet inteligente</p>
           <div class="sk-notification-card__alert">
@@ -166,7 +169,8 @@
         <div class="sk-notification-card__update">
           <form class="sk-notification-card__check" method="">
             <label class="sk-notification-card__label-title" for="update-document1">Actualizar documentos</label>
-            <input class="sk-notification-card__data-entry" type="checkbox" id="update-document-1" name="update-document-1" value="">
+            <input class="sk-notification-card__data-entry" type="checkbox" id="update-document-1"
+              name="update-document-1" value="">
           </form>
           <p class="sk-notification-card__text">SKM: intranet inteligente</p>
           <div class="sk-notification-card__alert">
@@ -177,7 +181,8 @@
         <div class="sk-notification-card__update sk-notification-card__update--remove-border">
           <form class="sk-notification-card__check" method="">
             <label class="sk-notification-card__label-title" for="update-document-2">Actualizar documentos</label>
-            <input class="sk-notification-card__data-entry" type="checkbox" id="update-document-2" name="update-document-2" value="">
+            <input class="sk-notification-card__data-entry" type="checkbox" id="update-document-2"
+              name="update-document-2" value="">
           </form>
           <p class="sk-notification-card__text">SKM: intranet inteligente</p>
           <div class="sk-notification-card__alert">
@@ -274,8 +279,12 @@
           <p class="sk-projects-card__text">Proyecto interno</p>
           <ul class="sk-projects-card__list sk-projects-card__list--special">
             <li class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--mod ">Intranet</li>
-            <li class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--mod sk-projects-card__item--big">Buscador inteligente</li>
-            <li class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--mod sk-projects-card__item--different">+2</li>
+            <li
+              class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--mod sk-projects-card__item--big">
+              Buscador inteligente</li>
+            <li
+              class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--mod sk-projects-card__item--different">
+              +2</li>
           </ul>
         </div>
         <div class="sk-projects-card__course">
@@ -283,8 +292,12 @@
           <p class="sk-projects-card__text">Proyecto interno</p>
           <ul class="sk-projects-card__list sk-projects-card__list--special">
             <li class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--mod ">Intranet</li>
-            <li class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--mod sk-projects-card__item--big">Buscador inteligente</li>
-            <li class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--mod sk-projects-card__item--different">+2</li>
+            <li
+              class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--mod sk-projects-card__item--big">
+              Buscador inteligente</li>
+            <li
+              class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--mod sk-projects-card__item--different">
+              +2</li>
           </ul>
         </div>
         <div class="sk-projects-card__course">
@@ -292,8 +305,12 @@
           <p class="sk-projects-card__text">Proyecto interno</p>
           <ul class="sk-projects-card__list sk-projects-card__list--special">
             <li class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--mod ">Intranet</li>
-            <li class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--mod sk-projects-card__item--big">Buscador inteligente</li>
-            <li class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--mod sk-projects-card__item--different">+2</li>
+            <li
+              class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--mod sk-projects-card__item--big">
+              Buscador inteligente</li>
+            <li
+              class="sk-projects-card__item sk-projects-card__item--circle sk-projects-card__item--mod sk-projects-card__item--different">
+              +2</li>
           </ul>
         </div>
       </div>

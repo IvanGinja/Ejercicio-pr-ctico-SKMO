@@ -21,7 +21,13 @@
     }
 
     @include media-query(lg) {
+        order: 1;
         width: 31%;
+    }
+
+    @include media-query(xl) {
+        order: 1;
+        width: 23.5%;
     }
 
     &__content {

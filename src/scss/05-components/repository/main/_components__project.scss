@@ -17,16 +17,41 @@
     @include menu-card;
 
     @include media-query(sm) {
+
+        @include order(4);
+
+        height: rem(5);
         margin-top: rem(135);
-        order: 4;
         padding-left: rem(8);
         width: 49%;
-        height: rem(5);
+
+        &__menu {
+            white-space: nowrap;
+        }
+
+        &__link {
+            padding: 10px 12px 10px 13px;
+        }
+
+        &__list--special {
+            gap: rem(2);
+        }
     }
 
     @include media-query(lg) {
-        width: 31%;
+
+        @include order(5);
+
         height: auto;
+        margin: 0;
+        margin: rem(136) 0;
+        padding: 0 0 0 rem(10);
+        width: 31.5%;
+    }
+
+    @include media-query(xl) {
+        padding-left: rem(10);
+        width: 45.2%;
     }
 
     margin-top: rem(11);
@@ -34,7 +59,6 @@
     &__content {
         background: color(white);
         padding: rem(0) rem(21) 0 rem(25);
-      
     }
 
     &__course {
@@ -52,8 +76,6 @@
         color: color(default-dark);
         padding-bottom: rem(9);
     }
-
-   
 
     &__foot {
         @include footer-card;

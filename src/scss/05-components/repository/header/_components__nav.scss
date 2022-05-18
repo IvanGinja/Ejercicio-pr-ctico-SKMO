@@ -12,21 +12,44 @@
 .#{$ns}nav-menu {
     
     @include order(1);
-
+   
     font-size: rem(25);
     padding: rem(12);
+    padding: 0;
     text-align: center;
+
+    @include media-query(lg) { 
+        
+        @include order(3);
+
+        width: 40%;
+
+        &__mobile-menu {
+            display: none;
+        }
+
+        &__list {
+            @include display-flex();
+            gap: rem(15);
+            padding: rem(5);
+            width: 70%;
+        }
+
+        &__item {
+            @include display-flex();
+            @include flex-direction(column);
+            @include flex-grow(1);
+        }
+    }
 
     &__list {
         display: none;
-    }
-
-    &__sk-submenu__btn {
-        
+        font-size: rem(15);
     }
 
     &__icon {
         color: color(white);
+        font-size: rem(25);
     }
 
 }

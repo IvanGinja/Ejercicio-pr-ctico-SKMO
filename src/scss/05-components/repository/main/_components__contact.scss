@@ -19,14 +19,22 @@
     @include menu-card;
 
     @include media-query(sm) {
+        height: rem(406);
         margin: rem(222) 0;
         order: 5;
-        height: rem(406);
+        width: 48%;
     }
 
     @include media-query(lg) {
-        width: 31%;
-        height: auto;
+        height: rem(408);
+        margin: 0;
+        order: 3;
+        padding-left: rem(10);
+        width: 31.5%;
+    }
+
+    @include media-query(xl) {
+        width: 28%;
     }
 
     &__content {
