@@ -43,13 +43,21 @@
     }
 
     &__list {
+        color: color(white);
         display: none;
         font-size: rem(15);
     }
 
     &__icon {
-        color: color(white);
         font-size: rem(25);
+    }
+
+    &__link {
+        color: color(white);
+    }
+
+    &__item {
+        gap: rem(5);        
     }
 
 }
